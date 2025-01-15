@@ -1,0 +1,39 @@
+@mixin visually-hidden() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin border($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin flexibility($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin reset-btn($width,$height) {
+    border-color: transparent;
+    background-color: transparent;
+    width: $width;
+    height: $height;
+}
+
+@mixin text-character($size, $height, $color) {
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}

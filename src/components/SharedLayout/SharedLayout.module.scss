@@ -1,0 +1,76 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+// Mobile styles
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 50px 8px 12px 8px;
+    background-color: v.$light-3-c;
+    @include m.flexibility(row,space-between,flex-end);
+    box-shadow: 0px 2px 11px 0px #3232320A;
+    width: 100%
+}
+
+.burger-wrapper{
+    @include m.flexibility(row, space-between, center);
+    column-gap: 4px
+}
+
+.burger-btn{
+    @include m.reset-btn(40px, 40px);
+    @include m.flexibility(row, center, center);
+}
+
+.search-btn{
+    @include m.reset-btn(40px, 40px);
+    @include m.flexibility(row, center, center);
+}
+
+.buy-wrapper{
+    @include m.flexibility(row, space-between, center);
+    column-gap: 4px
+}
+
+.account-btn{
+    @include m.reset-btn(40px, 40px);
+    @include m.flexibility(row, center, center);
+}
+
+.shoper-btn{
+    @include m.reset-btn(40px, 40px);
+    @include m.flexibility(row, center, center);
+    position: relative;
+    &>span{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: v.$gray-1-c;
+        height: 16px;
+        min-width: 16px;
+        border-radius: 50%;
+        color: v.$light-1-c;
+        font-size: 9px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        @include m.flexibility(row, center, center);
+    }
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .navigation {
+        @include m.visually-hidden;
+    }
+    .language-list{
+        @include m.visually-hidden;
+    }
+    .liked-btn{
+        @include m.visually-hidden;
+    }
+}
+
+// Mobile styles

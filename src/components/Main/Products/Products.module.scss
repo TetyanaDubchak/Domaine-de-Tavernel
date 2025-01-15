@@ -1,0 +1,97 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+.wrapper{
+    padding: 40px 0 48px 0;
+    width: 100%;
+    position: relative;
+}
+
+.title-wrapper{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 18px;
+
+    &::before{
+        content: '';
+        display: block;
+        @include m.border(1px,solid,v.$light-4-c);
+        position: absolute;
+        bottom: 25%;
+        right: 0;
+        width: 25%;
+    }
+}
+
+.title{
+    @include m.text-character(20px,36px,v.$gray-4-c);
+    font-style: italic;
+}
+
+.list{
+    margin-bottom: 24px;
+}
+
+.item{
+    max-width: 164px;
+    position: relative;
+    height: 328px !important;
+    height: 100%;
+
+    & a{
+        display: inline-block;
+        height: 100%;
+
+        & img{
+            height: 100%;
+        }
+    }
+}
+
+.img-title{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 142px;
+    min-height: 50px;
+    background-color: #12131478;
+    @include m.flexibility(row,center,center);
+
+    p{
+        @include m.text-character(14px,29px, v.$light-1-c);
+        text-transform: uppercase;
+    }
+}
+
+.pagination-wrapper{
+    position: relative;
+    width: calc(100% - 44px);
+    margin: 0 auto;
+}
+
+.pagination {
+    width: 100%;
+    height: 2px;
+    bottom: 48px !important;
+    background-color: v.$light-5-c;    
+}
+.swiper-pagination-progressbar-fill {
+    background-color: v.$gray-4-c !important;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 990px) {
+    .prev-btn {
+        @include m.visually-hidden;
+    }
+
+    .next-btn {
+        @include m.visually-hidden;
+    }
+
+    .sign-wrapper{
+        @include m.visually-hidden;
+    }
+}

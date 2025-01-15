@@ -1,0 +1,50 @@
+
+// Fons
+@font-face {
+    font-family: 'Crimson Text';
+    font-weight: 400;
+    src: url('../assets/fonts/Crimson_Text/CrimsonText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    font-weight: 600;
+    src: url('../assets/fonts/Crimson_Text/CrimsonText-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Italianno';
+    font-weight: 400;
+    src: url('../assets/fonts/Italianno/Italianno-Regular.ttf') format('truetype');
+}
+
+// Fons
+
+// Common styles
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: $default-font-size;  
+}
+
+body {
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 400;
+    color: $dark-c;
+    background-color: $light-1-c;
+}
+// Common styles
