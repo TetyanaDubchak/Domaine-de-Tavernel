@@ -1,6 +1,8 @@
 @use 'styles/mixins' as m;
 @use 'styles/variables' as v;
 
+@import '../../styles/function.scss';
+
 // Mobile styles
 .wrapper{
     position: fixed;
@@ -39,11 +41,11 @@
     @include m.flexibility(row, center, center);
 }
 
-.shoper-btn{
-    @include m.reset-btn(40px, 40px);
-    @include m.flexibility(row, center, center);
+.buy-wrapper-shoper{
+    @include m.flexibility(row, space-between, center);
     position: relative;
-    &>span{
+
+    & span{
         position: absolute;
         top: 0;
         right: 0;
@@ -59,7 +61,10 @@
     }
 }
 
-
+.shoper-btn{
+    @include m.reset-btn(40px, 40px);
+    @include m.flexibility(row, center, center);   
+}
 
 @media screen and (max-width: 990px) {
     .navigation {
@@ -68,9 +73,144 @@
     .language-list{
         @include m.visually-hidden;
     }
-    .liked-btn{
+    .buy-wrapper-liked{
+        @include m.visually-hidden;
+    }
+
+    .search-btn-desc{
+        @include m.visually-hidden;
+    }
+
+    .right-wrapper{
         @include m.visually-hidden;
     }
 }
 
 // Mobile styles
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m){
+    .wrapper{
+        padding: calcOutValue(1) calcOutValue(80);
+        border-bottom: 1px solid v.$light-4-c;
+        align-items: center;
+    }
+
+    .burger-btn{
+        @include m.visually-hidden;
+    }
+
+    .search-btn{
+        @include m.visually-hidden;
+    }
+
+    .navigation{
+        @include m.flexibility(row, space-between,center);
+        gap: calcOutValue(40);
+        @include m.text-character(calcOutValue(24), calcOutValue(28), v.$gray-4-c);
+    }
+
+    .logo{
+        width: calcOutValue(150);
+        height: calcOutValue(108);
+        margin-right: calcOutValue(335);
+        margin-left: calcOutValue(235);
+    }
+
+    .search-btn-desc{
+        @include m.reset-btn(calcOutValue(40), calcOutValue(40));
+        @include m.flexibility(row, center, center);
+
+        & svg{
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    .language-list{
+        @include m.flexibility(row, center,center);
+        & li{
+            padding: calcOutValue(4) calcOutValue(10);
+        }
+        & li:nth-child(2){
+            border-left: 1px solid v.$green-2-c;
+            & p{
+                color: v.$green-2-c;
+            }    
+        }
+
+        & p{
+            font-family: 'Montserrat';
+            font-weight: 300;
+            @include m.text-character(calcOutValue(20), calcOutValue(24), v.$gray-2-c);
+        }
+    }
+
+    .buy-wrapper{
+        @include m.flexibility(row, space-between, center);
+        column-gap: calcOutValue(28);
+       
+    }
+
+    .account-btn{
+        @include m.reset-btn(calcOutValue(40), calcOutValue(40));
+        @include m.flexibility(row, space-between, center);
+        & svg {
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    .buy-wrapper-liked {
+        @include m.flexibility(row, space-between, center);
+        & span {
+            background-color: v.$light-5-c;
+            border-radius: 50%;
+            color: v.$gray-4-c;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            @include m.flexibility(row, center, center);
+            height: calcOutValue(24);
+            min-width: calcOutValue(24);
+            font-size: calcOutValue(12);
+            line-height: calcOutValue(14);
+        }
+    }
+    
+    .liked-btn {
+        @include m.reset-btn(calcOutValue(62), calcOutValue(40));
+        min-width: calcOutValue(62);
+        @include m.flexibility(row, space-between, center);
+        gap: calcOutValue(10);
+    
+        & svg {
+            width: inherit;
+            height: inherit;
+        }}
+
+    .buy-wrapper-shoper{
+        & span {
+            background-color: v.$light-5-c;
+            color: v.$gray-4-c;
+            position: static;
+            height: calcOutValue(24);
+            min-width: calcOutValue(24);
+            font-size: calcOutValue(12);
+            line-height: calcOutValue(14);
+        }
+    }
+
+    .shoper-btn{
+        @include m.reset-btn(calcOutValue(62),calcOutValue(40));
+        min-width: calcOutValue(62);
+        @include m.flexibility(row, space-between, center);
+        gap: calcOutValue(10);
+        & svg {
+                width: inherit;
+                height: inherit;
+            }
+        
+    }
+
+}
+// Desktop styles

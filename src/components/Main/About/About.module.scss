@@ -1,0 +1,42 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+.wrapper{
+    background-image: url(../../../assets/images/main/about/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px 20px 58px 20px;
+    opacity: 66%;
+}
+
+.content-wrapper{
+    @include m.flexibility(column, center, center);
+    margin: 0 auto;
+    max-width: 336px;
+    padding: 74px 22px 76px 22px;
+    background-color: v.$light-3-c;
+}
+
+.title{
+    font-style: italic;
+    @include m.text-character(24px,66px, v.$gray-4-c);
+    text-transform: uppercase;
+}
+
+.text{
+    @include m.text-character(14px, 29px, v.$gray-2-c);
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.button{
+    display: inline-block;
+    background-color: v.$green-1-c;
+    padding: 6px 34px;
+    margin: 0 auto;
+
+    p{
+        @include m.text-character(14px, 29px, v.$gray-4-c);
+        text-transform: uppercase;
+    }
+}

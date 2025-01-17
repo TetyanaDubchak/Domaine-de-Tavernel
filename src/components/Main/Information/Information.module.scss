@@ -1,0 +1,56 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+.wrapper{
+position: relative;
+z-index: 1;
+background-color: #451616;
+    &::after{
+        position: absolute;
+        z-index: -1;
+        display: block;
+        top: 20%;
+        left: 0;
+        background-position-x: 50%;
+        width: 100%;
+        height: 40%;
+        content: '';
+        
+        background-image: url(../../../assets/images/main/information/Wine.png);
+        opacity: 40%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+};
+
+.wine-wrapper{
+    width: 100%;
+
+    background-image: url(../../../assets/images/main/information/bg-mob.png);
+
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+    
+
+    & div{
+        padding: 170px 20px 18px 20px;
+    }
+    
+}
+
+.text{
+    @include m.text-character(14px,29px, v.$light-1-c);
+    max-width: 336px;
+    margin: 0 auto;
+}
+
+.subtext{
+    font-family: 'Italianno', sans-serif;
+    font-weight: 400;
+    @include m.text-character(32px, 38px, v.$light-1-c);
+    opacity: 23%;
+    display: flex;
+    justify-content: flex-end;
+}

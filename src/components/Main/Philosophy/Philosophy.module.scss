@@ -1,0 +1,50 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+.wrapper{
+    padding: 84px 20px 94px 20px;
+    background-image: url(../../../assets/images/main/philosophy/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.content-wrapper {
+    @include m.flexibility(column, center, center);
+    margin: 0 auto;
+    max-width: 336px;
+    padding: 80px 22px 80px 22px;
+    background-color: v.$light-3-c;
+}
+
+.title{
+    font-style: italic;
+    letter-spacing: 2%;
+    @include m.text-character(24px, 66px, v.$gray-4-c);
+    text-transform: uppercase;
+}
+
+.text {
+    @include m.text-character(14px, 29px, v.$gray-2-c);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: v.$orange-1-c;
+    padding: 6px 34px;
+    margin: 0 auto;
+
+    p {
+        @include m.text-character(14px, 29px, v.$light-1-c);
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .subtext {
+        @include m.visually-hidden;
+    }
+
+}

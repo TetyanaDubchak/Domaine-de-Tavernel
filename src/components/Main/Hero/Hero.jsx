@@ -6,9 +6,9 @@ export const Hero = () => {
 
     return (
         <section className={s.wrapper}>
-            {/* <video width='100%' height='100vh' muted playsInline autoPlay loop style={{objectFit:'cover'}}>
+            <video width='100%' height='100vh' muted playsInline autoPlay loop style={{objectFit:'cover'}}>
                 <source src={video } type="video/mp4" />
-            </video> */}
+            </video>
         </section>
     )
 }

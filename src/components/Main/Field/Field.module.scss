@@ -1,0 +1,42 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+.wrapper {
+    padding: 50px 20px 50px 20px;
+    background-image: url(../../../assets/images/main/field/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+        
+}
+
+.content-wrapper{
+    @include m.flexibility(column, center, center);
+    margin: 0 auto;
+    max-width: 336px;
+    padding: 80px 22px 80px 22px;
+    background-color: v.$green-1-c;
+}
+
+.content-text{
+    @include m.text-character(14px,29px,v.$green-2-c);
+    text-align: center;
+}
+
+.subtext {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-family: 'Italianno', sans-serif;
+    font-weight: 400;
+    @include m.text-character(36px, 42px, v.$light-1-c);
+    opacity: 33%;
+    display: flex;
+    justify-content: flex-end;
+    }
+
+
+@media screen and (max-width: 990px) {
+    .title-wrapper {
+        @include m.visually-hidden;
+    }
+}

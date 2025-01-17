@@ -10,14 +10,16 @@ import s from "./Products.module.scss";
 import img1 from '../../../assets/images/main/products/img1.jpg';
 import img2 from '../../../assets/images/main/products/img2.jpg';
 import img3 from '../../../assets/images/main/products/img3.jpg';
+import btn1 from '../../../assets/images/main/products/prod-arrow-left.svg';
+import btn2 from '../../../assets/images/main/products/prod-arrow-right.svg'
 
-import sprite from '../../../assets/images/sprite.svg';
 
 export const Products = () => {
   return (
     <section className={s.wrapper}>
       <div className={s['title-wrapper']}>
-        <h3 className={s.title}>Explore our promotional products</h3>
+        <h2 className={s.title}>Explore our promotional products</h2>
+        <div className={s.line}></div>
       </div>
     <Swiper
         className={s.list}
@@ -38,6 +40,16 @@ export const Products = () => {
         pagination={{
           el: `.${s['pagination-wrapper']} .${s.pagination}`,
           type: 'progressbar',
+        }}
+        breakpoints={{
+          991: {
+            slidesPerView: 3,
+            pagination: {
+            el: `.${s['pagination-bullet']}`,
+            type: 'bullets',
+            clickable: true,
+                },
+          }
         }}
       >
         <SwiperSlide className={s.item}>
@@ -91,21 +103,18 @@ export const Products = () => {
         </SwiperSlide>
       </Swiper>
       <button className={`swiper-button-prev ${s['prev-btn']}`} type="button">
-        <svg width="54" height="54">
-          <use href={`${sprite}#icon-arrow-left`}></use>
-        </svg>
+        <img src={btn1} alt="button" />
       </button>
       <button className={`swiper-button-next ${s['next-btn']}`} type="button">
-        <svg width="54" height="54">
-          <use href={`${sprite}#icon-arrow-right`}></use>
-        </svg>
+        <img src={btn2} alt="button" />
           </button>
           <div className={s['pagination-wrapper']}>
               <div className={s.pagination}>
                   <span className={s['swiper-pagination-progressbar-fill']}>
                   </span>
               </div>
-          </div>
+      </div>
+      <div className={s['pagination-bullet']}></div>
       <div className={s['sign-wrapper']}>
         <p>Tavernel</p>
       </div>

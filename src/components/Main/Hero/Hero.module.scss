@@ -13,8 +13,8 @@
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
 screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
-screen and (min-resolution: 192dpi) and (min-width: v.$desk-1-m),
-screen and (min-resolution: 2dppx) and (min-width: v.$desk-1-m) {
+screen and (min-resolution: 192dpi) and (min-width: v.$b-tablet-m),
+screen and (min-resolution: 2dppx) and (min-width: v.$b-tablet-m) {
     .hero-container {
         background-image: url('../../../assets//images/main/hero/bg-desc.png');
     }

@@ -32,10 +32,17 @@ export const SharedLayout = () => {
                         </svg>
                     </button>
                 </div>
-                <Link to='/'><img width='80' height="58" src={image} alt="logotype" /></Link>
+                
+                <Link className={s['logo']} to='/'><img width='80' height="58" src={image} alt="logotype" /></Link>
+
+                <button className={s['search-btn-desc']}>
+                    <svg width='24' height='24'>
+                        <use href={ sprite + '#icon-search'}></use>
+                    </svg>
+                </button>
                 <ul className={s['language-list']}>
-                    <li>FR</li>
-                    <li>EN</li>
+                    <li><p>FR</p></li>
+                    <li><p>EN</p></li>
                 </ul>
                 <div className={s['buy-wrapper']}>
                     <button className={s['account-btn']}>
@@ -43,19 +50,25 @@ export const SharedLayout = () => {
                             <use href={ sprite + '#icon-account'}></use>
                         </svg>
                     </button>
-                    <button className={s['liked-btn']}>
-                        <svg width='40px' height='40px'>
-                            <use href={ sprite + '#icon-heart'}></use>
-                        </svg>
-                    </button>
-                    <button className={s['shoper-btn']}>
+                    <div className={s['buy-wrapper-liked']}>
+                        <button className={s['liked-btn']}>
+                            <svg width='24' height='24'>
+                                <use href={ sprite + '#icon-heart'}></use>
+                            </svg>
+                        </button>
+                       <span>0</span>
+                    </div>
+                    
+                    <div className={s['buy-wrapper-shoper']}>
+                        <button className={s['shoper-btn']}>
                         <svg width='24' height='20'>
                             <use href={ sprite + '#icon-shoper'}></use>
                         </svg>
+                        </button>
                         <span>0</span>
-                    </button>
+                    </div>
+                    
                 </div>
-               
 
             </header>
             <Suspense>
