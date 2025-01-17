@@ -9,8 +9,8 @@ const Catalog = lazy(() => import("../pages/Catalog"));
 const Contact = lazy(() => import("../pages/Contact"));
 const Gallery = lazy(() => import("../pages/Gallery"));
 const Main = lazy(() => import("../pages/Main"));
-const Product = lazy(() => import("../pages/Product"));
-const Term = lazy(() => import("../pages/Term"));
+// const Product = lazy(() => import("../pages/Product"));
+// const Term = lazy(() => import("../pages/Term"));
 
 export const App = () => {
   return (
