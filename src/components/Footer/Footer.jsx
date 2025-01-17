@@ -29,15 +29,15 @@ export const Footer = () => {
                         </ul>
                     </div>
                     <ul className={s['social-list']}>
-                        <li><a href="#">
+                        <li><a href="#link">
                             <svg width='12' height='12'>
                                 <use href={ sprite + '#icon-facebook'}></use>
                             </svg></a></li>
-                        <li><a href="#">
+                        <li><a href="#link">
                             <svg width='17' height='17'>
                                 <use href={ sprite + '#icon-viber'}></use>
                             </svg></a></li>
-                        <li><a href="#">
+                        <li><a href="#link">
                             <svg width='12' height='12'>
                                 <use href={ sprite + '#icon-instagram'}></use>
                             </svg>
