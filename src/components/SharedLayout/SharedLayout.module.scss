@@ -115,6 +115,8 @@
         height: calcOutValue(108);
         margin-right: calcOutValue(335);
         margin-left: calcOutValue(235);
+        display: flex;
+        align-items: center;
     }
 
     .search-btn-desc{

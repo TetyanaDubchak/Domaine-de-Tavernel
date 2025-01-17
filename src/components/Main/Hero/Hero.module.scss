@@ -10,6 +10,10 @@
     background-repeat: no-repeat;
 }
 
+.video{
+    height: 100vh;
+}
+
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
 screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: v.$desk-1-m),
