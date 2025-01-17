@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Domaine-de-Tavernel/static/css/main.621d4c7a.css",
-    "main.js": "/Domaine-de-Tavernel/static/js/main.c72904a8.js",
+    "main.css": "/Domaine-de-Tavernel/static/css/main.938aa55e.css",
+    "main.js": "/Domaine-de-Tavernel/static/js/main.1bdf003e.js",
     "static/js/175.336c1027.chunk.js": "/Domaine-de-Tavernel/static/js/175.336c1027.chunk.js",
     "static/js/148.5ee70e01.chunk.js": "/Domaine-de-Tavernel/static/js/148.5ee70e01.chunk.js",
     "static/js/875.d5507e5f.chunk.js": "/Domaine-de-Tavernel/static/js/875.d5507e5f.chunk.js",
     "static/js/951.237d01e3.chunk.js": "/Domaine-de-Tavernel/static/js/951.237d01e3.chunk.js",
     "static/js/960.518da8de.chunk.js": "/Domaine-de-Tavernel/static/js/960.518da8de.chunk.js",
-    "static/css/174.a3eecced.chunk.css": "/Domaine-de-Tavernel/static/css/174.a3eecced.chunk.css",
-    "static/js/174.bb173253.chunk.js": "/Domaine-de-Tavernel/static/js/174.bb173253.chunk.js",
+    "static/css/174.48d82e31.chunk.css": "/Domaine-de-Tavernel/static/css/174.48d82e31.chunk.css",
+    "static/js/174.9ce3cd65.chunk.js": "/Domaine-de-Tavernel/static/js/174.9ce3cd65.chunk.js",
     "static/js/863.e17aced1.chunk.js": "/Domaine-de-Tavernel/static/js/863.e17aced1.chunk.js",
     "static/media/hero-video.mp4": "/Domaine-de-Tavernel/static/media/hero-video.db65874012fbf43e020c.mp4",
     "static/media/img1.jpg": "/Domaine-de-Tavernel/static/media/img1.6bbb4a77ccbc6b39c56f.jpg",
@@ -39,19 +39,19 @@
     "static/media/prod-arrow-left.svg": "/Domaine-de-Tavernel/static/media/prod-arrow-left.064bcd50e491a385499c2cf75d7b1ea3.svg",
     "static/media/prod-arrow-right.svg": "/Domaine-de-Tavernel/static/media/prod-arrow-right.6294d85d5e28fe6e4e7f6543898db741.svg",
     "static/media/menu-burger.svg": "/Domaine-de-Tavernel/static/media/menu-burger.60676147869b828935f3a6d5c26f33e5.svg",
-    "main.621d4c7a.css.map": "/Domaine-de-Tavernel/static/css/main.621d4c7a.css.map",
-    "main.c72904a8.js.map": "/Domaine-de-Tavernel/static/js/main.c72904a8.js.map",
+    "main.938aa55e.css.map": "/Domaine-de-Tavernel/static/css/main.938aa55e.css.map",
+    "main.1bdf003e.js.map": "/Domaine-de-Tavernel/static/js/main.1bdf003e.js.map",
     "175.336c1027.chunk.js.map": "/Domaine-de-Tavernel/static/js/175.336c1027.chunk.js.map",
     "148.5ee70e01.chunk.js.map": "/Domaine-de-Tavernel/static/js/148.5ee70e01.chunk.js.map",
     "875.d5507e5f.chunk.js.map": "/Domaine-de-Tavernel/static/js/875.d5507e5f.chunk.js.map",
     "951.237d01e3.chunk.js.map": "/Domaine-de-Tavernel/static/js/951.237d01e3.chunk.js.map",
     "960.518da8de.chunk.js.map": "/Domaine-de-Tavernel/static/js/960.518da8de.chunk.js.map",
-    "174.a3eecced.chunk.css.map": "/Domaine-de-Tavernel/static/css/174.a3eecced.chunk.css.map",
-    "174.bb173253.chunk.js.map": "/Domaine-de-Tavernel/static/js/174.bb173253.chunk.js.map",
+    "174.48d82e31.chunk.css.map": "/Domaine-de-Tavernel/static/css/174.48d82e31.chunk.css.map",
+    "174.9ce3cd65.chunk.js.map": "/Domaine-de-Tavernel/static/js/174.9ce3cd65.chunk.js.map",
     "863.e17aced1.chunk.js.map": "/Domaine-de-Tavernel/static/js/863.e17aced1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.621d4c7a.css",
-    "static/js/main.c72904a8.js"
+    "static/css/main.938aa55e.css",
+    "static/js/main.1bdf003e.js"
   ]
 }
