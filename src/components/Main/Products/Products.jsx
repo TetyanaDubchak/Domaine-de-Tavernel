@@ -11,7 +11,7 @@ import img1 from '../../../assets/images/main/products/img1.jpg';
 import img2 from '../../../assets/images/main/products/img2.jpg';
 import img3 from '../../../assets/images/main/products/img3.jpg';
 import btn1 from '../../../assets/images/main/products/prod-arrow-left.svg';
-import btn2 from '../../../assets/images/main/products/prod-arrow-right.svg'
+import btn2 from '../../../assets/images/main/products/prod-arrow-right.svg';
 
 
 export const Products = () => {

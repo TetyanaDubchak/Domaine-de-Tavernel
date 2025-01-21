@@ -111,8 +111,8 @@
         height: calcOutValue(176);
 
         & img{
-            width: calcOutValue(160);
-            height: calcOutValue(160);
+            max-width: calcOutValue(160);
+            max-height: calcOutValue(160);
         }
 
         & span{

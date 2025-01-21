@@ -1,6 +1,8 @@
 @use 'styles/mixins' as m;
 @use 'styles/variables' as v;
 
+@import '../../../styles/function.scss';
+
 .wrapper{
     background-image: url(../../../assets/images/main/about/bg.jpg);
     background-repeat: no-repeat;
@@ -39,4 +41,81 @@
         @include m.text-character(14px, 29px, v.$gray-4-c);
         text-transform: uppercase;
     }
+}
+
+@media screen and (max-width: 990px) {
+    .decor {
+        @include m.visually-hidden;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+.wrapper{
+    position: relative;
+    padding: calcOutValue(142) calcOutValue(772) calcOutValue(152) 0;
+    opacity: 78%;
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: calcOutValue(80);
+        right: 0;
+        display: block;
+        width: calcOutValue(102);
+        height: calcOutValue(288);
+        background-color: v.$green-2-c;
+        background-image: url(../../../assets/images/main/tree-green.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+    }
+}
+
+.content-wrapper{
+    position: relative;
+    align-items: flex-start;
+    max-width: calcOutValue(1180);
+    padding: calcOutValue(82) calcOutValue(62) calcOutValue(28) calcOutValue(280);
+
+    &::after{
+        position: absolute;
+        left: 0;
+        bottom: calcOutValue(120);
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: v.$light-5-c;
+    }
+}
+
+.title{
+    @include m.text-character(calcOutValue(74),calcOutValue(32), v.$gray-4-c);
+    text-transform: none;
+    margin-bottom: calcOutValue(114);
+}
+
+.decor{
+    position: absolute;
+    right: calcOutValue(1);
+    top: calcOutValue(160);
+    font-family: "Italianno", sans-serif;
+    @include m.text-character(calcOutValue(48), calcOutValue(56), v.$dark-c);
+    opacity: 18%;
+}
+
+.text{
+    @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-2-c);
+    text-align: start;
+    margin-bottom: calcOutValue(120);
+}
+
+.button{
+    padding: calcOutValue(14) calcOutValue(126);
+    margin: 0;
+    align-self: flex-end;
+    p{
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-4-c);
+    }
+}
 }

@@ -1,6 +1,8 @@
 @use 'styles/mixins' as m;
 @use 'styles/variables' as v;
 
+@import '../../../styles/function.scss';
+
 .wrapper{
 position: relative;
 z-index: 1;
@@ -53,4 +55,39 @@ background-color: #451616;
     opacity: 23%;
     display: flex;
     justify-content: flex-end;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+
+        &::after {
+            top: 0;
+            height: 100%;
+            background-position-x: 0;
+            background-size: contain;
+        }
+    };
+
+    .wine-wrapper {
+
+        & div {
+            padding: calcOutValue(128) calcOutValue(288) calcOutValue(146) calcOutValue(1010);
+        }
+
+    }
+
+    .text {
+        @include m.text-character(calcOutValue(22), calcOutValue(32), v.$light-1-c);
+        max-width: auto;
+        margin: 0;
+    }
+
+    .subtext {
+        position: absolute;
+        z-index: 4;
+        bottom: calcOutValue(32);
+        right: 0;
+        @include m.text-character(calcOutValue(64), calcOutValue(74), v.$light-1-c);
+        display: block;
+    }
 }
