@@ -36,10 +36,20 @@
     background-color: v.$green-1-c;
     padding: 6px 34px;
     margin: 0 auto;
+    transition: background-color 0.3s ease-in;
 
     p{
         @include m.text-character(14px, 29px, v.$gray-4-c);
         text-transform: uppercase;
+        transition: color 0.3s ease-in;
+    }
+
+    &:hover,
+    &:focus{
+        background-color: v.$green-2-c;
+        p{
+            color: v.$light-8-c;
+        }
     }
 }
 
