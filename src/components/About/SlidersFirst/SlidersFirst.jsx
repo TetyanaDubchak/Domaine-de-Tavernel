@@ -69,8 +69,6 @@ export const SlidersFirst = () => {
                     <img src={btn2} alt="arrow" />
             </button>
             </div>
-            
-            
         </section>
     )
 }

@@ -1,0 +1,35 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+@import '../../../styles/function.scss';
+
+.wrapper{
+    padding-bottom: 48px;
+    background-color: v.$light-3-c;
+}
+
+.text-wrapper{
+    border-bottom: 1px solid v.$light-5-c;
+    padding: 42px 20px;
+}
+
+.text{
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    @include m.text-character(20px, 38px, v.$gray-4-c);
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        padding-bottom: calcOutValue(148);
+    }
+
+    .text-wrapper {
+        padding: calcOutValue(128) calcOutValue(278);
+    }
+
+    .text {
+        @include m.text-character(calcOutValue(48), calcOutValue(67), v.$gray-4-c);
+    }
+}

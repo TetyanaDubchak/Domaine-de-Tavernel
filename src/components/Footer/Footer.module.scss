@@ -147,6 +147,11 @@
             gap: calcOutValue(8);
             align-items: center;
 
+            & svg{
+                width: calcOutValue(40);
+                height: calcOutValue(40);
+            }
+
             & p{
                 font-weight: 600;
                 @include m.text-character(calcOutValue(20), calcOutValue(36), v.$light-3-c);
