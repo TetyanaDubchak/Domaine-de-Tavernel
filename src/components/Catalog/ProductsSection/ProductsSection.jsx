@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import { FilterAndSortBtnMob } from "../FilterAndSortBtnMob/FilterAndSortBtnMob"
 import { FilterDesk } from "../FilterDesk/FilterDesk"
 import { ProductsList } from "../ProductsList/ProductsList"
@@ -7,7 +7,7 @@ import s from './ProductsSection.module.scss'
 import { CleanBtn } from "../CleanBtn/CleanBtn"
 
 export const ProductsSection = () => {
-    const [addedFilter, setAddedFilter] = useState(["Red", '2002 year']);
+    const addedFilter=["Red", '2002 year'];
 
     return (
         <section className={s.wrapper}>
