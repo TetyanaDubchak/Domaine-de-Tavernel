@@ -24,6 +24,10 @@
     & p {
         font-weight: 600;
         @include m.text-character(14px, 29px, v.$gray-4-c);
+
+        & span{
+            color: v.$gray-2-c;
+        }
     }
 }
 

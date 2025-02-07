@@ -22,9 +22,38 @@ import img12 from '../../../assets/images/gallery/photos/img-12.jpg';
 
 import btn1 from '../../../assets/images/gallery/prod-arrow-left.svg';
 import btn2 from '../../../assets/images/gallery/prod-arrow-right.svg';
+import { useState } from 'react';
+import { ModalImage } from 'components/ModalImage/ModalImage';
 
+const imageGroups = [
+    [img1, img2, img3, img4],
+    [img5, img6, img7, img8],
+    [img9, img10, img11, img12]
+];
+
+const flatImages = imageGroups.flat();
 
 export const Photos = () => {
+    const [isModalImageOpen, setIsModalImageOpen] = useState(false);
+     const [selectedIndex, setSelectedIndex] = useState(null);   
+
+    const handleOpenModalImage = (image) => {
+        setIsModalImageOpen(true);
+        setSelectedIndex(image);
+    }
+    const handleCloseModalImage = () => {
+        setIsModalImageOpen(false);
+        setSelectedIndex(null);
+    }
+
+    const prevImage = () => {
+        setSelectedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : flatImages.length - 1));
+    };
+
+    const nextImage = () => {
+        setSelectedIndex((prevIndex) => (prevIndex < flatImages.length - 1 ? prevIndex + 1 : 0));
+    };
+
     return (
         <section className={s.wrapper}>
             <div className={s['title-wrapper']}>
@@ -55,58 +84,24 @@ export const Photos = () => {
                 breakpoints={{
                     991: {
                         slidesPerView: 3,
-                        // spaceBetween:6,
                     }
                 }}
             >
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img1} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img2} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img3} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img4} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img5} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img6} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img7} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img8} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img9} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img10} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img11} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img12} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img1} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img2} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img3} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img4} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img5} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img6} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img7} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img8} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={s.item}>
-                    <div className={s['images-wrapper-grid']}>
-                        <div className={s['img-wrapper-grid-1']}><img className={s.picture} src={img9} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-2']}><img className={s.picture} src={img10} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-3']}><img className={s.picture} src={img11} alt="wine" /></div>
-                        <div className={s['img-wrapper-grid-4']}><img className={s.picture} src={img12} alt="wine" /></div>
-                    </div>
-                </SwiperSlide>
+                {imageGroups.map((group, index) => (
+                    <SwiperSlide key={index} className={s.item}>
+                        <div className={s['images-wrapper-grid']}>
+                            {group.map((img, idx) => {
+                                const imageIndex = index * 4 + idx;
+                                return(
+                                  <div key={idx} onClick={() => handleOpenModalImage(imageIndex)} className={s[`img-wrapper-grid-${idx + 1}`]}>
+                                    <img className={s.picture} src={img} alt="wine" />
+                                </div>  
+                                )
+                                
+                            })}
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
             <button className={`swiper-button-prev ${s['prev-btn']}`} type="button">
                 <img src={btn1} alt="button" />
@@ -121,6 +116,7 @@ export const Photos = () => {
                 </div>
             </div>
             <div className={s['pagination-bullet']}></div>
+            {isModalImageOpen ? <ModalImage image={flatImages[selectedIndex]} onClose={ handleCloseModalImage} onPrev={prevImage} onNext={nextImage} /> : ''} 
         </section>
     );
 }

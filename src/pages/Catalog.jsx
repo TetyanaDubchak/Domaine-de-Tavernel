@@ -1,8 +1,15 @@
+import { Hero } from "components/HeroPages/HeroPages";
+import bg from "../assets/images/catalog/bg-filter.png";
+import { Navigation } from "components/NavigateTitle/NavigateTitle";
+import { ProductsSection } from "components/Catalog/ProductsSection/ProductsSection";
+
 const Catalog = () => {
     
     return (
         <main>
-            <h2>Catalog</h2>
+            <Hero bg={bg} />
+            <Navigation page='Shop' details='All wine (1400)' />
+            <ProductsSection/>
         </main>
     )
 }

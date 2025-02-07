@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 15;
     padding: 50px 8px 12px 8px;
     background-color: v.$light-3-c;
     @include m.flexibility(row,space-between,flex-end);

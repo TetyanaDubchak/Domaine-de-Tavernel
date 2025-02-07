@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
 
 import s from "./SharedLayout.module.scss";
@@ -8,15 +8,26 @@ import burger from '../../assets/images/header/menu-burger.svg';
 import sprite from '../../assets/images/sprite.svg';
 
 import { Footer } from "components/Footer/Footer";
+import { MobileMenu } from "components/MobileMenu/MobileMenu";
 
 
 
 export const SharedLayout = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+
+    const handleMenuOpen = () => {
+        setIsMenuOpen(true);
+    }
+
+    const handleMenuClose = () => {
+        setIsMenuOpen(false);  
+    }
+
     return (
         <div>
             <header className={s.wrapper}>
                 <div className={s['burger-wrapper']}>
-                    <button className={s['burger-btn']}>
+                    <button className={s['burger-btn']} onClick={handleMenuOpen}>
                         <img src={burger} alt="mobile menu" width='24' height='24' />
                     </button>
                     <nav className={s.navigation}>
@@ -66,15 +77,14 @@ export const SharedLayout = () => {
                         </svg>
                         </button>
                         <span>0</span>
-                    </div>
-                    
+                    </div>      
                 </div>
-
             </header>
             <Suspense>
                 <Outlet/>
             </Suspense>
-            <Footer/>
+            <Footer />
+            {isMenuOpen ? <MobileMenu onClose={ handleMenuClose} /> : ''}
         </div>
     )
 }

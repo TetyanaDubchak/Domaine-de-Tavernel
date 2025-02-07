@@ -1,0 +1,54 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+@import '../../../styles/function.scss';
+
+.list{
+    width: 336px;
+}
+
+.item{
+    @include m.flexibility(row,flex-start,center);
+
+    p{
+        @include m.text-character(14px,29px, v.$gray-4-c);
+        width: 50%;
+    }
+    span{
+        @include m.text-character(14px, 29px, v.$gray-2-c);
+         width: 50%;
+    };
+    &:not(:last-child){
+        margin-bottom: 8px;
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .wrapper{
+        padding-top: calcOutValue(50);
+        margin-bottom: calcOutValue(28);
+    }
+
+    .list {
+        width: calcOutValue(402);
+    }
+
+    .item {
+
+        p {
+            @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+        }
+
+        span {
+            @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-2-c);
+        }
+
+        ;
+
+        &:not(:last-child) {
+            margin-bottom: calcOutValue(20);
+        }
+    }
+}

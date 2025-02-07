@@ -11,7 +11,7 @@ const Gallery = () => {
         <main>
             <Hero bg={ bg} />
             <Navigation page='Gallery' />
-            <Photos/>
+            <Photos />
             <Albums/>
         </main>
     )

@@ -22,7 +22,7 @@ export const Footer = () => {
                     </ul>
                     <ul className={s['conditions-list']}>
                         <li><Link>Privacy policy</Link></li>
-                        <li><Link>Term and condition</Link></li>
+                        <li><Link to='/term'>Term and condition</Link></li>
                         <li className={s['mobile-blog']}><Link to='/blog'>FAQ</Link></li>
                         <li><Link to='/contacts'>Сontacts</Link></li>
                     </ul>

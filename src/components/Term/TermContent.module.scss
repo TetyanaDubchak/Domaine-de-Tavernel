@@ -1,0 +1,36 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: 152px 20px 56px 20px;
+}
+
+.title{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    @include m.text-character(16px,27px,v.$gray-4-c);
+}
+
+.text{
+    font-family: "Montserrat", sans-serif;
+    @include m.text-character(14px, 27px, v.$gray-3-c);
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper{
+        padding: calcOutValue(182) calcOutValue(510) calcOutValue(120) calcOutValue(280);
+    }
+
+    .title{
+        margin-bottom: calcOutValue(36);
+        @include m.text-character(calcOutValue(24),calcOutValue(50),v.$gray-4-c);
+    }
+
+    .text{
+        @include m.text-character(calcOutValue(16), calcOutValue(32), v.$gray-3-c);
+    }
+}

@@ -1,0 +1,30 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+@import '../../../styles/function.scss';
+
+
+@media screen and (max-width: v.$max-mob-m) {
+    .wrapper {
+        @include m.visually-hidden;
+    }
+}
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+.wrapper{
+    padding: calcOutValue(88) calcOutValue(86) calcOutValue(88) calcOutValue(120);
+    width: calcOutValue(546);
+}
+
+.top-wrapper{
+    padding-bottom: calcOutValue(12);
+    border-bottom: 1px solid v.$light-5-c;
+}
+
+.title{
+    @include m.text-character(calcOutValue(20),calcOutValue(36),v.$gray-4-c);
+    text-transform: uppercase;
+}
+
+}

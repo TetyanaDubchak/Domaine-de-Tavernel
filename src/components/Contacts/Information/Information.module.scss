@@ -1,0 +1,95 @@
+@use 'styles/mixins' as m;
+@use 'styles/variables' as v;
+
+@import '../../../styles/function.scss';
+
+.wrapper{
+    background-color: v.$light-3-c;
+    padding: 18px 20px 0 20px;
+}
+
+.picture-wrapper{
+    width: 100%;
+    margin-bottom: 32px;
+     & img{
+        object-fit: cover;
+        width: 100%;
+     }
+}
+
+.info-title{
+    @include m.text-character(24px,29px,v.$gray-4-c);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.info-text{
+    @include m.text-character(14px, 29px, v.$gray-3-c);
+    margin-bottom: 16px;
+}
+
+.phone-wrapper{
+    margin-top: 8px;
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+    @include m.flexibility(row, flex-start,center);
+    gap: 12px;
+    .phone-number{
+        color: v.$gray-3-c;
+    }
+}
+
+
+// Desktop styles 
+
+@media screen and (min-width: v.$b-tablet-m) {
+
+.wrapper{
+    padding: 0 0 0 calcOutValue(104);
+}
+
+.extra-wrapper{
+    background-color: v.$light-5-c;
+    padding: calcOutValue(76) calcOutValue(116) calcOutValue(76) calcOutValue(174);
+    @include m.flexibility(row-reverse, space-between,center);
+    gap: calcOutValue(52);
+}
+
+.picture-wrapper{
+    width: calcOutValue(834);
+    margin-bottom: 0;
+}
+
+.info-wrapper{
+    width: calcOutValue(638);
+}
+
+.info-title{
+    @include m.text-character(calcOutValue(64),calcOutValue(77),v.$gray-3-c);
+    margin-bottom: calcOutValue(38);
+}
+
+.info-text{
+    @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-3-c);
+    margin-bottom: 0;
+
+    & span{
+        color: v.$dark-c;
+    };
+
+    &:first-of-type{
+        margin-bottom: calcOutValue(48);
+    }
+}
+
+.phone-wrapper{
+    margin-top: calcOutValue(38);
+    @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-3-c);
+
+    gap: calcOutValue(12);
+    .phone-number{
+        color: v.$gray-4-c;
+        font-size: calcOutValue(22);
+        font-weight: 600;
+    }
+}
+}

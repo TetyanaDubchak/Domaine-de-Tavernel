@@ -1,8 +1,10 @@
+import { TermContent } from "../components/Term/TermContent";
+
 const Term = () => {
     
     return (
         <main>
-            <h2>Term</h2>
+            <TermContent/>
         </main>
     )
 }
