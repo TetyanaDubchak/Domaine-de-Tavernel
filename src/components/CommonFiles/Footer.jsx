@@ -2,7 +2,6 @@ import { NavLink, Link } from "react-router-dom";
 
 import s from "../../assets/components/CommonFiles/Footer.module.scss";
 
-import sprite from '../../assets/images/sprite.svg';
 import tree from '../../assets/images/main/tree-all.svg';
 import { Icon } from "./Icon";
 
