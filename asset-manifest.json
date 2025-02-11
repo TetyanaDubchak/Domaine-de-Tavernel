@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Domaine-de-Tavernel/static/css/main.f2c3b400.css",
-    "main.js": "/Domaine-de-Tavernel/static/js/main.dc7dae83.js",
-    "static/css/113.6bdfd8fe.chunk.css": "/Domaine-de-Tavernel/static/css/113.6bdfd8fe.chunk.css",
+    "main.css": "/Domaine-de-Tavernel/static/css/main.982e452c.css",
+    "main.js": "/Domaine-de-Tavernel/static/js/main.d3b061b9.js",
+    "static/css/113.4a4c4e77.chunk.css": "/Domaine-de-Tavernel/static/css/113.4a4c4e77.chunk.css",
     "static/js/113.eb876403.chunk.js": "/Domaine-de-Tavernel/static/js/113.eb876403.chunk.js",
     "static/css/193.58d3cb91.chunk.css": "/Domaine-de-Tavernel/static/css/193.58d3cb91.chunk.css",
     "static/js/193.6c82384a.chunk.js": "/Domaine-de-Tavernel/static/js/193.6c82384a.chunk.js",
@@ -124,9 +124,9 @@
     "static/media/close.svg": "/Domaine-de-Tavernel/static/media/close.f0b6d9555d1c98d864bbccffe8fae135.svg",
     "static/media/ic-plus.svg": "/Domaine-de-Tavernel/static/media/ic-plus.e3436dc065612b7878a91e8ca2cf0490.svg",
     "static/media/ic-minus.svg": "/Domaine-de-Tavernel/static/media/ic-minus.4e09112cef9b19ba7f95b57d534c01db.svg",
-    "main.f2c3b400.css.map": "/Domaine-de-Tavernel/static/css/main.f2c3b400.css.map",
-    "main.dc7dae83.js.map": "/Domaine-de-Tavernel/static/js/main.dc7dae83.js.map",
-    "113.6bdfd8fe.chunk.css.map": "/Domaine-de-Tavernel/static/css/113.6bdfd8fe.chunk.css.map",
+    "main.982e452c.css.map": "/Domaine-de-Tavernel/static/css/main.982e452c.css.map",
+    "main.d3b061b9.js.map": "/Domaine-de-Tavernel/static/js/main.d3b061b9.js.map",
+    "113.4a4c4e77.chunk.css.map": "/Domaine-de-Tavernel/static/css/113.4a4c4e77.chunk.css.map",
     "113.eb876403.chunk.js.map": "/Domaine-de-Tavernel/static/js/113.eb876403.chunk.js.map",
     "193.58d3cb91.chunk.css.map": "/Domaine-de-Tavernel/static/css/193.58d3cb91.chunk.css.map",
     "193.6c82384a.chunk.js.map": "/Domaine-de-Tavernel/static/js/193.6c82384a.chunk.js.map",
@@ -147,7 +147,7 @@
     "942.210a274c.chunk.js.map": "/Domaine-de-Tavernel/static/js/942.210a274c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2c3b400.css",
-    "static/js/main.dc7dae83.js"
+    "static/css/main.982e452c.css",
+    "static/js/main.d3b061b9.js"
   ]
 }
