@@ -64,6 +64,7 @@
 .modal{
     padding: calcOutValue(50) calcOutValue(80) calcOutValue(42) calcOutValue(80);
     bottom: calcOutValue(10);
+    left: auto;
     right: calcOutValue(10);
     width: calcOutValue(1150);
 }

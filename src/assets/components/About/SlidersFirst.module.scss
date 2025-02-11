@@ -93,7 +93,7 @@
 @media screen and (min-width: v.$b-tablet-m) {
 
     .wrapper {
-        padding: calcOutValue(0) calcOutValue(0) calcOutValue(0) calcOutValue(742);
+        padding: calcOutValue(0) calcOutValue(0) calcOutValue(0) calcOutValue(0);
     }
 
     .img-wrapper {
@@ -110,6 +110,8 @@
     }
 
     .swiper-wrapper{
+        width: calcOutValue(1182);
+        margin-left: auto;
         &::after{
             position: absolute;
             right: 0;
