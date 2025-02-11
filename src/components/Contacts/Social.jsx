@@ -1,5 +1,3 @@
-import sprite from '../../assets/images/sprite.svg';
-
 import s from '../../assets/components/Contacts/Social.module.scss';
 import { Icon } from 'components/CommonFiles/Icon';
 
