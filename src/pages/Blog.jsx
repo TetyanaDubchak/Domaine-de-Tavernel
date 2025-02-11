@@ -1,8 +1,8 @@
 
-import { Hero } from 'components/HeroPages/HeroPages';
+import { Hero } from 'components/CommonFiles/HeroPages';
 import bg from '../assets/images/blogs/bg-grape.png';
-import { Navigation } from 'components/NavigateTitle/NavigateTitle';
-import { Articles } from 'components/Blog/Articles/Articles';
+import { Navigation } from 'components/CommonFiles/NavigateTitle';
+import { Articles } from 'components/Blog/Articles';
 
 const Blog = () => {
     

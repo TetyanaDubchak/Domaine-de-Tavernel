@@ -1,0 +1,280 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: 40px 0 48px 0;
+    width: 100%;
+    position: relative;
+    background-image: url(../../../assets/images/main/products/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.title-wrapper{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 24px;
+}
+
+.title{
+    opacity: 79%;
+    @include m.text-character(20px,36px,v.$gray-4-c);
+    font-style: italic;
+}
+
+.line {
+    border-bottom: 1px solid v.$light-5-c;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-bottom: 10px;
+}
+
+.list{
+    margin-bottom: 24px;
+}
+
+.item{
+    max-width: 164px;
+    position: relative;
+    height: 328px !important;
+    height: 100%;
+
+    & a{
+        display: inline-block;
+        height: 100%;
+
+        & img{
+            height: 100%;
+        }
+    }
+}
+
+.img-title{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 142px;
+    min-height: 50px;
+    background-color: #12131478;
+    @include m.flexibility(row,center,center);
+
+    p{
+        @include m.text-character(14px,29px, v.$light-1-c);
+        text-transform: uppercase;
+        opacity: 79%;
+    }
+}
+
+.pagination-wrapper{
+    position: relative;
+    width: calc(100% - 44px);
+    margin: 0 auto;
+}
+
+.pagination {
+    width: 100%;
+    height: 2px;
+    bottom: 48px !important;
+    background-color: v.$light-5-c;    
+}
+.swiper-pagination-progressbar-fill {
+    background-color: v.$gray-4-c !important;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 990px) {
+    .prev-btn {
+        @include m.visually-hidden;
+    }
+
+    .next-btn {
+        @include m.visually-hidden;
+    }
+
+    .sign-wrapper{
+        @include m.visually-hidden;
+    }
+
+    .pagination-bullet{
+        @include m.visually-hidden;
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .wrapper{
+        padding: calcOutValue(78) calcOutValue(278) calcOutValue(106) calcOutValue(278);
+
+        &::after{
+            position: absolute;
+            top: 0;
+            right: calcOutValue(40);
+            z-index: 0;
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 100%;
+            background-color: v.$light-5-c;
+        }
+    }
+
+    .title-wrapper{
+        padding-left: 0;
+        margin-bottom: calcOutValue(46);
+        gap: calcOutValue(24);
+    }
+
+    .title{
+        opacity: 79%;
+        @include m.text-character(calcOutValue(36),calcOutValue(32),v.$gray-4-c);
+    }
+
+    .line {
+        margin-bottom: calcOutValue(8);
+    }
+
+    .list{
+        margin-bottom: calcOutValue(36);
+    }
+
+    .item{
+        max-width: calcOutValue(448) !important;
+        height: auto !important;
+
+        & a{
+            width: 100%;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+
+    .img-title{
+        bottom: calcOutValue(18);
+        width: calcOutValue(372);
+        min-height: calcOutValue(80);
+
+        p{
+            @include m.text-character(calcOutValue(24),calcOutValue(40), v.$light-1-c);
+        }
+    }
+
+    .prev-btn{
+        top: auto;
+        left: calcOutValue(780);
+        bottom: 9%;
+        width: calcOutValue(54);
+        height: calcOutValue(54);
+        background-color: transparent;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .prev-btn:after{
+        content: '';
+    }
+
+    .next-btn:after {
+        content: '';
+        }
+
+    .next-btn{
+        top: auto;
+        right: calcOutValue(780);
+        bottom: 9%;
+        width: calcOutValue(54);
+        height: calcOutValue(54);
+        background-color: transparent;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+    .pagination-wrapper{
+        @include m.visually-hidden;
+    }
+
+    .pagination-bullet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: calcOutValue(36);
+
+        & .swiper-pagination-bullet{
+        width: calcOutValue(8);
+        height: calcOutValue(8);
+        background-color: #D9D9D9;
+        opacity: 1;
+        transition: background-color 0.3s ease;
+    }
+    }
+
+    .swiper-pagination-bullet-active {
+            background-color: v.$dark-c;
+        }
+
+    .sign-wrapper{
+        position: absolute;
+        right: 0;
+        top: calcOutValue(222);
+        z-index: 1;
+        background-color: v.$orange-1-c;
+        width: calcOutValue(100);
+        height: calcOutValue(430);
+
+        &::before{
+            position: absolute;
+            top: 0;
+            right: calcOutValue(37);
+            content: '';
+            z-index: 2;
+            width: 5px;
+            height: calcOutValue(80);
+            display: block;
+            background-image: url(../../../assets/images/main/products/decor_line_top.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% center;
+        }
+
+        &::after{
+            position: absolute;
+            bottom: 0;
+            right: calcOutValue(37);
+            content: '';
+            z-index: 2;
+            width: 5px;
+            height: calcOutValue(80);
+            display: block;
+            background-image: url(../../../assets/images/main/products/decor_line_bot.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% center;
+        }
+
+        & p{
+            position: absolute;
+            bottom: 40%;
+            transform: translateY(-50%);
+            left: -20%;
+            font-family: "Italianno", sans-serif;
+            font-weight: 400;
+            @include m.text-character(calcOutValue(64),calcOutValue(74),v.$orange-2-c);
+            transform: rotate(-90deg);
+        }
+    }
+}

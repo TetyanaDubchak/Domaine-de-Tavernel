@@ -1,0 +1,75 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.item{
+    height: 48px;
+    padding-left: 16px;
+    @include m.flexibility(row, flex-start, center);
+}
+
+.checkbox-label{
+    @include m.flexibility(row,flex-start,center);
+    gap: 12px;
+}
+
+.checkbox-decor{
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid v.$gray-2-c;
+        background-color: transparent;
+        border-radius: 2px;       
+}
+
+.checkbox:checked+.checkbox-decor {
+    background-image: url(../../../assets/images/contacts/checked.svg);
+    background-color: v.$orange-1-c;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: v.$orange-1-c;
+}
+
+.checkbox{
+    @include m.visually-hidden;
+}
+
+.checkbox-name{
+    @include m.text-character(16px,29px,v.$gray-3-c);
+    text-transform: capitalize;
+}
+
+.checkbox-quality{
+    @include m.text-character(16px, 29px, v.$gray-2-c);
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+    .item {
+        height: calcOutValue(48);
+        padding-left: calcOutValue(16);
+    }
+
+    .checkbox-label {
+        gap: calcOutValue(12);
+    }
+
+    .checkbox-decor {
+        width: calcOutValue(18);
+        height: calcOutValue(18);
+    }
+
+    .checkbox:checked+.checkbox-decor {
+        background-size: calcOutValue(18);
+    }
+
+    .checkbox-name {
+        @include m.text-character(calcOutValue(16), calcOutValue(29), v.$gray-3-c);
+    }
+
+    .checkbox-quality {
+        @include m.text-character(calcOutValue(16), calcOutValue(29), v.$gray-2-c);
+    }
+
+}

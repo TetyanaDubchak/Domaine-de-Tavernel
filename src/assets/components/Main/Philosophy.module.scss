@@ -1,0 +1,137 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: 84px 20px 94px 20px;
+    background-image: url(../../../assets/images/main/philosophy/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.content-wrapper {
+    @include m.flexibility(column, center, center);
+    margin: 0 auto;
+    max-width: 336px;
+    padding: 80px 22px 80px 22px;
+    background-color: v.$light-3-c;
+}
+
+.title{
+    font-style: italic;
+    letter-spacing: 2%;
+    @include m.text-character(24px, 66px, v.$gray-4-c);
+    text-transform: uppercase;
+}
+
+.text {
+    @include m.text-character(14px, 29px, v.$gray-2-c);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: v.$orange-1-c;
+    padding: 6px 34px;
+    margin: 0 auto;
+
+    p {
+        @include m.text-character(14px, 29px, v.$light-1-c);
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .subtext {
+        @include m.visually-hidden;
+    }
+    .decor-wrapper{
+        @include m.visually-hidden;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        position: relative;
+        padding: calcOutValue(120) calcOutValue(0) calcOutValue(120) calcOutValue(0);
+        background-position: 50% center;
+    }
+    .main-wrapper{
+        margin-left: auto;
+        display: flex;
+        max-width: calcOutValue(1310);
+    }
+    .decor-wrapper{
+        margin: 0;
+        align-self: center;
+        width: calcOutValue(132);
+        height: calcOutValue(430);
+        
+        &::before{
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-image: url(../../../assets/images/main/philosophy/philosophy-icon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .content-wrapper {
+        position: relative;
+        align-items: normal;
+        margin: 0;
+        max-width: 100%;
+        width: calcOutValue(1180);
+        padding: calcOutValue(46) calcOutValue(62) calcOutValue(28) calcOutValue(78);
+
+        &::after{
+            position: absolute;
+            left: 0;
+            bottom: calcOutValue(108);
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: v.$light-5-c;
+        }
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(74), calcOutValue(32), v.$gray-4-c);
+        text-transform: none;
+        margin-bottom: calcOutValue(112);
+    }
+
+    .subtext{
+        position: absolute;
+        top: calcOutValue(116);
+        right: calcOutValue(202);
+        font-family: "Italianno", sans-serif;
+        @include m.text-character(calcOutValue(48), calcOutValue(56), v.$gray-4-c);
+        opacity: 18%;
+    }
+
+    .text {
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-4-c);
+        text-align: start;
+        margin-bottom: calcOutValue(90);
+        opacity: 79%;
+        max-width: calcOutValue(786);
+    }
+
+    .button {
+        display: inline-block;
+        background-color: v.$orange-2-c;
+        padding: calcOutValue(14) calcOutValue(126);
+        margin: 0 0 0 auto;
+
+        p {
+            @include m.text-character(calcOutValue(20), calcOutValue(32), v.$light-1-c);
+        }
+    }
+
+}

@@ -1,4 +1,4 @@
-import s from "./TermContent.module.scss";
+import s from "../../assets/components/Term/TermContent.module.scss";
 
 export const TermContent = () => {
     return (

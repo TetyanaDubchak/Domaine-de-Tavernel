@@ -1,9 +1,9 @@
-import { Hero } from "components/HeroPages/HeroPages";
-import { Navigation } from "components/NavigateTitle/NavigateTitle";
+import { Hero } from "components/CommonFiles/HeroPages";
+import { Navigation } from "components/CommonFiles/NavigateTitle";
 
 import bg from '../assets/images/gallery/hero/bg.png';
-import { Albums } from "components/Gallery/Albums/Albums";
-import { Photos } from "components/Gallery/Photos/Photos";
+import { Albums } from "components/Gallery/Albums";
+import { Photos } from "components/Gallery/Photos";
 
 const Gallery = () => {
     

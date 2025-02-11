@@ -1,0 +1,120 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+
+    overflow: auto;
+    pointer-events: auto;
+
+    background-color: v.$light-3-c;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-wrapper{
+    padding: 72px 20px 20px 30px;
+    border-bottom: 1px solid v.$light-5-c;
+    @include m.flexibility(row, space-between, center);
+}
+
+.title{
+    @include m.text-character(16px,29px,v.$gray-4-c);
+    letter-spacing: 1%;
+    text-transform: uppercase;
+}
+
+.close-btn{
+    background-color: transparent;
+    border-color: transparent;
+    width: 24px;
+    height: 24px;
+}
+
+.navigation-wrapper{
+    padding: 48px 30px 32px 30px;
+    border-bottom: 1px solid v.$light-5-c;
+}
+
+.navigation{
+    @include m.flexibility(column, center,flex-start);
+    gap: 18px;
+    @include m.text-character(16px,29px,v.$gray-4-c);
+    letter-spacing: 1%;
+    text-transform: uppercase;
+}
+
+.user-list{
+    padding: 32px 30px 32px 30px;
+    @include m.flexibility(column,center,flex-start);
+    gap: 12px;
+}
+
+.user-link{
+    @include m.text-character(16px, 29px, v.$gray-4-c);
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    @include m.flexibility(row, flex-start, center);
+    gap: 8px;
+    & span{
+        color: v.$light-6-c;
+    }
+
+    & p{
+        font-family: "Montserrat", sans-serif;
+        @include m.text-character(16px, 19px, v.$orange-1-c);
+    }
+}
+
+.language-wrapper{
+    margin-top: auto;
+    padding: 28px 34px;
+    position: relative;
+    height: 82px;
+
+    &::before{
+        content: '';
+        display: block;
+        background-color: v.$light-5-c;
+        opacity: 60%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.language-list {
+    position: absolute;
+    top: 28px;
+    left: 34px;
+    z-index: 2;
+    @include m.flexibility(row, flex-start, center);
+
+    & li {
+        padding: 2px 14px;
+    }
+
+    & li:nth-child(2) {
+        border-left: 1px solid v.$green-2-c;
+
+        & p {
+            color: v.$green-2-c;
+        }
+    }
+
+    & p {
+        font-family: 'Montserrat';
+        font-weight: 300;
+        @include m.text-character(16px, 27px, v.$gray-2-c);
+    }
+}

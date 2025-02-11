@@ -1,7 +1,7 @@
-import { Hero } from "components/HeroPages/HeroPages";
+import { Hero } from "components/CommonFiles/HeroPages";
 import bg from "../assets/images/catalog/bg-filter.png";
-import { Navigation } from "components/NavigateTitle/NavigateTitle";
-import { ProductsSection } from "components/Catalog/ProductsSection/ProductsSection";
+import { Navigation } from "components/CommonFiles/NavigateTitle";
+import { ProductsSection } from "components/Catalog/ProductsSection";
 
 const Catalog = () => {
     

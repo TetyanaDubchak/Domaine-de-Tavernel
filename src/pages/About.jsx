@@ -1,11 +1,11 @@
-import { Navigation } from 'components/NavigateTitle/NavigateTitle';
-import { Hero } from '../components/HeroPages/HeroPages';
-import { SlidersFirst } from 'components/About/SlidersFirst/SlidersFirst';
-import { HistoryFirst } from 'components/About/HistoryFirst/HistoryFirst';
-import { ToBlog } from 'components/About/ToBlog/ToBlog';
-import { HistorySecond } from 'components/About/HistorySecond/HistorySecond';
-import { SlidersSecond } from 'components/About/SlidersSecond/SlidersSecond';
-import { Information } from 'components/About/Information/Information';
+import { Navigation } from 'components/CommonFiles/NavigateTitle';
+import { Hero } from '../components/CommonFiles/HeroPages';
+import { SlidersFirst } from 'components/About/SlidersFirst';
+import { HistoryFirst } from 'components/About/HistoryFirst';
+import { ToBlog } from 'components/About/ToBlog';
+import { HistorySecond } from 'components/About/HistorySecond';
+import { SlidersSecond } from 'components/About/SlidersSecond';
+import { Information } from 'components/About/Information';
 
 import bg from '../assets/images/about/hero/bg.png';
 

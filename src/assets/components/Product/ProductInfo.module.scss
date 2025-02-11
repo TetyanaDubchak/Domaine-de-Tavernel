@@ -1,0 +1,33 @@
+@use '../../styles/mixins' as m;
+@use '../../styles/variables' as v;
+
+@import '../../styles/function.scss';
+
+.wrapper{
+    padding: 32px 20px 56px 20px;
+    background-color: v.$light-3-c;
+}
+
+
+@media screen and (max-width: v.$max-mob-m) {
+
+    .characteristic-wrapper{
+        @include m.visually-hidden;
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        padding: calcOutValue(48) calcOutValue(280) calcOutValue(110) calcOutValue(280);
+        display: grid;
+    }
+
+    .extra-wrapper{
+        position: relative;
+        padding-left: calcOutValue(690);
+        min-height: calcOutValue(798);
+        margin-bottom: calcOutValue(120);
+    }
+    
+}

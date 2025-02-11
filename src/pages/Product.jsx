@@ -1,10 +1,10 @@
-import { Hero } from "components/HeroPages/HeroPages";
+import { Hero } from "components/CommonFiles/HeroPages";
 
 
 import bg from '../assets/images/product/bg-img.png';
-import { Navigation } from "components/NavigateTitle/NavigateTitle";
-import { ProductInfo } from "components/Product/ProductInfo/ProductInfo";
-import { AdditionalProducts } from "components/Product/AdditionalProducts/AdditionalProducts";
+import { Navigation } from "components/CommonFiles/NavigateTitle";
+import { ProductInfo } from "components/Product/ProductInfo";
+import { AdditionalProducts } from "components/Product/AdditionalProducts";
 
 const Product = () => {
     

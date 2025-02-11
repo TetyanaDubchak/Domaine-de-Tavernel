@@ -1,12 +1,12 @@
-import { Hero } from "../components/Main/Hero/Hero";
-import { Tradition } from "../components/Main/Tradition/Tradition";
-import { Products } from "../components/Main/Products/Products";
-import { AreasPhoto } from "../components/Main/AreasPhoto/AreasPhoto";
-import { About } from "../components/Main/About/About";
-import  {Gallery}  from "../components/Main/Gallery/Gallery";
-import { Field } from "../components/Main/Field/Field";
-import { Philosophy } from "../components/Main/Philosophy/Philosophy";
-import { Information } from "components/Main/Information/Information";
+import { Hero } from "../components/Main/Hero";
+import { Tradition } from "../components/Main/Tradition";
+import { Products } from "../components/Main/Products";
+import { AreasPhoto } from "../components/Main/AreasPhoto";
+import { About } from "../components/Main/About";
+import  {Gallery}  from "../components/Main/Gallery";
+import { Field } from "../components/Main/Field";
+import { Philosophy } from "../components/Main/Philosophy";
+import { Information } from "components/Main/Information";
 
 const Main = () => {
     

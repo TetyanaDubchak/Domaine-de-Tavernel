@@ -1,0 +1,63 @@
+
+// Fons
+@font-face {
+    font-family: 'Crimson Text';
+    font-weight: 400;
+    src: url('../fonts/Crimson_Text/CrimsonText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/Crimson_Text/CrimsonText-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    font-weight: 600;
+    src: url('../fonts/Crimson_Text/CrimsonText-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Italianno';
+    font-weight: 400;
+    src: url('../fonts/Italianno/Italianno-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+// Fons
+
+// Common styles
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 0.833333vw;  
+}
+
+body {
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 400;
+    color: $dark-c;
+    background-color: $light-1-c;
+}
+// Common styles
