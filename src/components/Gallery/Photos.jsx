@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/Gallery/Photos.module.scss";
+import s from "../../assets/styles/components/Gallery/Photos.module.scss";
 
 import img1 from '../../assets/images/gallery/photos/img-1.jpg';
 import img2 from '../../assets/images/gallery/photos/img-2.jpg';
@@ -95,9 +95,7 @@ export const Photos = () => {
                                 return(
                                   <div key={idx} onClick={() => handleOpenModalImage(imageIndex)} className={s[`img-wrapper-grid-${idx + 1}`]}>
                                     <img className={s.picture} src={img} alt="wine" />
-                                </div>  
-                                )
-                                
+                                </div>)   
                             })}
                         </div>
                     </SwiperSlide>
@@ -109,14 +107,8 @@ export const Photos = () => {
             <button className={`swiper-button-next ${s['next-btn']}`} type="button">
                 <img src={btn2} alt="button" />
             </button>
-            <div className={s['pagination-wrapper']}>
-                <div className={s.pagination}>
-                    <span className={s['swiper-pagination-progressbar-fill']}>
-                    </span>
-                </div>
-            </div>
-            <div className={s['pagination-bullet']}></div>
-            {isModalImageOpen ? <ModalImage image={flatImages[selectedIndex]} onClose={ handleCloseModalImage} onPrev={prevImage} onNext={nextImage} /> : ''} 
+            <div className={`${s['pagination-bullet']} ${['bullet-wrapper-gallery']}`}></div>
+            <ModalImage in={isModalImageOpen} image={flatImages[selectedIndex]} onClose={ handleCloseModalImage} onPrev={prevImage} onNext={nextImage} /> 
         </section>
     );
 }

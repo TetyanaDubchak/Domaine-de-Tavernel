@@ -1,0 +1,63 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.list{
+    padding: 12px 20px;
+    @include m.flexibility(column,flex-start,flex-start);
+    gap: 12px;
+}
+
+.item{
+    @include m.flexibility(row, space-between, center);
+    width: 100%;
+}
+
+.item-total{
+    border-bottom: 1px solid v.$light-5-c;
+    @include m.flexibility(row, space-between, center);
+    width: 100%;
+    padding: 0 20px 12px 20px;
+}
+
+.extra-info{
+    @include m.text-character(16px, 29px, v.$gray-3-c);
+}
+
+.main-title{
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-info{
+    @include m.text-character(16px, 29px, v.$gray-4-c);
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .list {
+        padding: calcOutValue(24) calcOutValue(38) calcOutValue(24) calcOutValue(38);
+        gap: calcOutValue(8);
+        border-bottom: 1px solid v.$light-5-c;
+    }
+
+    .item-total {
+        border-bottom: none;
+        padding: calcOutValue(34) calcOutValue(38);
+    }
+
+    .extra-info {
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-3-c);
+    }
+
+    .main-title {
+        @include m.text-character(calcOutValue(20), calcOutValue(36), v.$gray-4-c);
+        text-transform: none;
+    }
+
+    .main-info {
+        @include m.text-character(calcOutValue(20), calcOutValue(36), v.$gray-4-c);
+        font-weight: 600;
+    }
+}

@@ -1,5 +1,5 @@
 import { StarsRating } from "components/CommonFiles/StarsRating";
-import s from "../../assets/components/Product/ReviewChapter.module.scss";
+import s from "../../assets/styles/components/Product/ReviewChapter.module.scss";
 
 import arrowBot from '../../assets/images/catalog/arrow-bot.svg';
 import { useState } from "react";
@@ -94,8 +94,8 @@ export const ReviewChapter = () => {
                 })}
             </ul>
             <button className={s['more-button']}>See more <img src={arrowBot} alt="arrow-button" /></button>
-            {isModalReviewOpen ? <ReviewForm openSentModal={handleOpenSentReview} onClose={handleCloseModalReview} /> : ''}
-            {isSentReviewOpen ? <Review name='review'  onClose={ handleCloseSentReview} />:''}
+             <ReviewForm in={isModalReviewOpen} openSentModal={handleOpenSentReview} onClose={handleCloseModalReview} />
+             <Review name='your review was sent successfully!' in={isSentReviewOpen}  onClose={ handleCloseSentReview} />
         </div>
     )
 }

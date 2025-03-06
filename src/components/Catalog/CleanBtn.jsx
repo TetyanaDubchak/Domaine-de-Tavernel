@@ -1,4 +1,4 @@
-import s from '../../assets/components/Catalog/CleanBtn.module.scss';
+import s from '../../assets/styles/components/Catalog/CleanBtn.module.scss';
 import close from "../../assets/images/catalog/close.svg";
 
 export const CleanBtn = ({list}) => {

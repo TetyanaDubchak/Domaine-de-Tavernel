@@ -1,8 +1,8 @@
 
-import s from '../../assets/components/CommonFiles/HeroPages.module.scss';
+import s from '../../assets/styles/components/CommonFiles/HeroPages.module.scss';
 
 export const Hero = ({bg}) => {
-    return ( <section style={{backgroundImage: `url(${bg})`}}  className={s.wrapper}>
+    return ( <section style={{backgroundImage: `url(${bg})`}} id='top'  className={s.wrapper}>
        
             <div className={s['content-wrapper']}>
                 <div className={s['title-wrapper']}> 

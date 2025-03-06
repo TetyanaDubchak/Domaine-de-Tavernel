@@ -1,7 +1,7 @@
 import img1 from "../../assets/images/about/history/first/img-1.png";
 import img2 from "../../assets/images/about/history/first/img-2.png";
 
-import s from '../../assets/components/About/HistoryFirst.module.scss';
+import s from '../../assets/styles/components/About/HistoryFirst.module.scss';
 
 export const HistoryFirst = () => {
     return (

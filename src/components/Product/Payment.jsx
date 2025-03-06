@@ -1,4 +1,4 @@
-import s from "../../assets/components/Product/Payment.module.scss";
+import s from "../../assets/styles/components/Product/Payment.module.scss";
 
 export const Payment = () => {
 

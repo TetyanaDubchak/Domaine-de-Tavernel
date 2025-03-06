@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from '../../assets/components/About/SlidersFirst.module.scss';
+import s from '../../assets/styles/components/About/SlidersFirst.module.scss';
 
 import btn1 from "../../assets/images/about/arrow-left.svg";
 import btn2 from "../../assets/images/about/arrow-right.svg";
@@ -64,7 +64,7 @@ export const SlidersFirst = () => {
                 <button className={`swiper-button-prev ${s['prev-btn']}`} type="button">
                    <img src={btn1} alt="arrow" />
             </button>
-            <div className={s['pagination-bullet']}></div>
+            <div className={`${s['pagination-bullet']} ${['bullet-wrapper-about'] }`}></div>
                 <button className={`swiper-button-next ${s['next-btn']}`} type="button">
                     <img src={btn2} alt="arrow" />
             </button>

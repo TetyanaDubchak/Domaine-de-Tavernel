@@ -1,0 +1,68 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.backdrop{
+    @include m.backdrop;
+}
+
+.modal{
+    position: relative;
+    background-color: v.$light-2-c;
+    padding: 18px 16px 32px 16px;
+    width: 336px;
+    min-height: 534px;
+}
+
+.close-btn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+.title{
+    @include m.text-character(16px,29px,v.$gray-4-c);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 46px;
+
+    &::after{
+        position: absolute;
+        left: 0;
+        top: 64px;
+        display: block;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: v.$light-3-c;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .modal {
+        padding: calcOutValue(20) calcOutValue(232) calcOutValue(34) calcOutValue(232);
+        width: calcOutValue(900);
+        min-height: calcOutValue(712);
+    }
+
+    .close-btn {
+        top: calcOutValue(10);
+        right: calcOutValue(8);
+        width: calcOutValue(40);
+        height: calcOutValue(40);
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(24), calcOutValue(40), v.$gray-4-c);
+        margin-bottom: calcOutValue(58);
+
+        &::after {
+            top: calcOutValue(74);
+        }
+    }
+}
+

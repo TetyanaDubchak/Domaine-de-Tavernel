@@ -1,6 +1,6 @@
 import starGray from "../../assets/images/catalog/star-gray.svg";
 import starFill from "../../assets/images/catalog/star-fill.svg";
-import s from '../../assets/components/CommonFiles/StarsRating.module.scss'
+import s from '../../assets/styles/components/CommonFiles/StarsRating.module.scss'
 
 export const StarsRating = ({stars}) => {
 

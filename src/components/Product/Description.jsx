@@ -5,7 +5,7 @@ import food4 from '../../assets/images/product/recommended/chees.png';
 import food5 from '../../assets/images/product/recommended/meat.png';
 import food6 from '../../assets/images/product/recommended/bacon.png';
 
-import s from "../../assets/components/Product/Description.module.scss";
+import s from "../../assets/styles/components/Product/Description.module.scss";
 
 export const Description = () => {
 

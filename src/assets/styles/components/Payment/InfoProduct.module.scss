@@ -1,0 +1,141 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.main-wrapper{
+    margin-top: 10px;
+    @include m.flexibility(column, flex-end,center);
+}
+
+.edit-btn{
+    margin-bottom: 6px;
+    @include m.text-character(16px,29px,v.$gray-3-c);
+    background-color: transparent;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.wrapper{
+    padding: 14px 10px;
+    background-color: v.$light-4-c;
+    @include m.flexibility(row, flex-start, flex-start);
+    gap: 30px;
+    width: 100%;
+}
+
+.img-wrapper{
+    width: 24%;
+    position: relative;
+}
+
+.img-quantity-wrapper{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: v.$orange-1-c;
+    border-radius: 50%;
+    @include m.flexibility(row, center, center);
+
+    span{
+        font-family: 'Montserrat',sans-serif;
+        @include m.text-character(8px, 10px, v.$light-1-c);
+    }
+}
+
+.title{
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.taste{
+    @include m.text-character(14px, 29px, v.$gray-2-c);
+}
+
+.quantity-wrapper{
+    margin-top: 46px;
+}
+
+.price{
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .quantity{
+        @include m.visually-hidden;
+    }
+
+    .img-quantity-wrapper{
+        @include m.visually-hidden;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .main-wrapper {
+        margin-top: calcOutValue(16);
+        @include m.flexibility(column, flex-end, center);
+    }
+
+    .edit-btn {
+        position: absolute;
+        top: calcOutValue(30);
+        right: calcOutValue(38);
+        margin-bottom: 0;
+        @include m.text-character(calcOutValue(16), calcOutValue(36), v.$gray-3-c);
+    }
+
+    .img-wrapper{
+        width: calcOutValue(100);
+        height: calcOutValue(122);
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .wrapper {
+        padding: calcOutValue(20) calcOutValue(16) calcOutValue(20) calcOutValue(30);
+        gap: calcOutValue(40);
+        width: 100%;
+        align-items: center
+    }
+
+    .info-wrapper{
+        width: 100%;
+    }
+
+    .img-quantity-wrapper {
+        @include m.visually-hidden;
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: calcOutValue(4);
+    }
+
+    .taste {
+        @include m.text-character(calcOutValue(16), calcOutValue(36), v.$gray-2-c);
+        margin-bottom: calcOutValue(30);
+    }
+
+    .quantity-wrapper {
+        margin-top: 0;
+        width: 100%;
+        @include m.flexibility(row, space-between,center);
+    }
+
+    .quantity{
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-2-c);
+    }
+
+    .price {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+    }
+}

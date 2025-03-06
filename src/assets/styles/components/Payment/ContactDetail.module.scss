@@ -1,0 +1,27 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper{
+        @include m.flexibility(row-reverse, space-between, flex-start);
+        gap: calcOutValue(20);
+        padding: 0 calcOutValue(280) calcOutValue(28) calcOutValue(280);
+    }
+
+    .order-wrapper{
+        border: 1px solid v.$light-5-c;
+        width:calcOutValue(555) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calcOutValue(634);
+    }
+
+    .check-wrapper{
+        border: 1px solid v.$light-4-c;
+        width: calcOutValue(785);
+        background-color: v.$light-2-c;
+    }
+}

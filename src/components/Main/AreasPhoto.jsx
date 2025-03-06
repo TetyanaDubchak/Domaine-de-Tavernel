@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from '../../assets/components/Main/Photo.scss';
+import s from '../../assets/styles/components/Main/Photo.scss';
 
 import img1 from '../../assets/images/main/areasPhoto/img1.jpg';
 import img1desc from '../../assets/images/main/areasPhoto/img1-desc.png';
@@ -85,7 +85,7 @@ export const AreasPhoto = () => {
             </Swiper>
             <button className={`swiper-button-prev ${'prev-btn'}`}><img src={btn1} alt="button" /></button>
             <button className={`swiper-button-next ${'next-btn'}`}><img src={btn2} alt="button" /></button>
-            <div className="pagination"></div>
+            <div className="pagination bullet-wrapper-light"></div>
         </section>
     )
 }

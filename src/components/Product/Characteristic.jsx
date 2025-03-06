@@ -1,4 +1,4 @@
-import s from "../../assets/components/Product/Characteristic.module.scss";
+import s from "../../assets/styles/components/Product/Characteristic.module.scss";
 
 export const Characteristic = () => {
     return (

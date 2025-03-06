@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import picture from '../../assets/images/catalog/products/product-1.png';
 import listProduct from "../../assets/json/products.json";
 
-import s from "../../assets/components/Product/AdditionalProducts.module.scss";
+import s from "../../assets/styles/components/Product/AdditionalProducts.module.scss";
 import { StarsRating } from "components/CommonFiles/StarsRating";
 import { Icon } from "components/CommonFiles/Icon";
 
@@ -33,7 +33,7 @@ export const AdditionalProducts = () => {
         
                 }
                 pagination={{
-                    el: `.${s['pagination-wrapper']} .${s.pagination}`,
+                    el: `.${s['pagination-wrapper']}`,
                     type: 'progressbar',
                 }}
                 breakpoints={{
@@ -68,13 +68,10 @@ export const AdditionalProducts = () => {
                     </SwiperSlide>
                 })}
             </Swiper>
-            <div className={s['pagination-wrapper']}>
-                <div className={s.pagination}>
+            <div className={`${s['pagination-wrapper']} ${['progressbar-wrapper-products']}`}>
                     <span className={s['swiper-pagination-progressbar-fill']}>
                     </span>
-                </div>
             </div>
-            <div className={s['pagination-bullet']}></div>
         </section>
     );
 }

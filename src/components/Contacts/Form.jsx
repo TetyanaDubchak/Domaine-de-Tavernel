@@ -1,10 +1,11 @@
 import { useState } from "react";
-import s from '../../assets/components/Contacts/Form.module.scss';
+import s from '../../assets/styles/components/Contacts/Form.module.scss';
 import { Review } from "../CommonFiles/Review";
+import { Link } from "react-router-dom";
 
 export const Form = () => {
 
-     const [inputValues, setInputValues] = useState({
+    const [inputValues, setInputValues] = useState({
         userName: "",
         userLastName: "",
         userEmail: "",
@@ -34,7 +35,7 @@ export const Form = () => {
         userName: "",
         userLastName: "",
         userEmail: "",
-        userTel: "",
+        userTel: "+38",
         userComment: "",})
     };
 
@@ -87,13 +88,15 @@ export const Form = () => {
                             onChange={handleOnInputChange} />
                         <span className={s['contact-data-title']}>Your Email *</span>
                     </label>
-                    <label className={s['contact-data-wrapper']}>   
-                        <input
+                        <label className={s['contact-data-wrapper']}>
+                            <input
                             className={`${s["contact-data-input"]} ${inputValues.userTel ? s["is-value"] : ""}`}
                             name='userTel'
                             type="tel"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}[0-9]{2}"
-                            onChange={handleOnInputChange} />
+                            pattern="^\d{3}-\d{3}-\d{2}-\d{2}$"
+                            value={inputValues.userTel}
+                            onChange={handleOnInputChange}
+                        />  
                         <span className={s['contact-data-title']}>Your phone number</span>
                     </label>
                     </div>
@@ -112,12 +115,12 @@ export const Form = () => {
                             <span className={s['checkbox-decor']}></span>
                         </div>
                         <p className={s['policy-text']}>I hereby confirm my consent to abide by the &nbsp;
-                            <a href="pr">terms and conditions.</a></p>
+                            <Link to="/term">terms and conditions.</Link></p>
                         </label>
                     <button className={`${s["form-button"]} ${isCheckedPolicy ? s["is-checked"] : ""}`} disabled={!isCheckedPolicy} type='submit'>send</button>
                 </form>
             </div>
-            {isReviewOpen ? <Review name= 'contact form' onClose={ handleCloseReview} /> : '' }
+            <Review name= 'your CONTACT FORM was sent successfully!' in={isReviewOpen} onClose={ handleCloseReview} />
         </section>
     )
 }

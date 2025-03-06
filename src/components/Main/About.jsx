@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import s from '../../assets/components/Main/About.module.scss'
+import s from '../../assets/styles/components/Main/About.module.scss'
 
 export const About = () => {
     return (

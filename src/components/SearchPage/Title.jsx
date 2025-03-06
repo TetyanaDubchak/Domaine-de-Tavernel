@@ -1,4 +1,4 @@
-import s from '../../assets/components/SearchPage/Title.module.scss'
+import s from '../../assets/styles/components/SearchPage/Title.module.scss'
 
 export const Title = ({name='The French Touch', quality='0'}) => {
     return (

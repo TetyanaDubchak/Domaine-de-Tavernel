@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import s from '../../assets/components/Catalog/SortModal.module.scss';
+import s from '../../assets/styles/components/Catalog/SortModal.module.scss';
 import close from '../../assets/images//catalog/close.svg'
 
 export const SortModal = ({ onClose }) => {

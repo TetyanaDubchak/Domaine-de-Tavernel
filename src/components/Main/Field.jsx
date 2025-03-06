@@ -1,4 +1,4 @@
-import s from '../../assets/components/Main/Field.module.scss'
+import s from '../../assets/styles/components/Main/Field.module.scss'
 
 import img1 from '../../assets/images/main/field/bg-maps-philos.png';
 import map from '../../assets/images/main/field/bg-map.png';

@@ -1,0 +1,113 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wine-wrapper{
+    background-image: url(../../../images/search/decorline.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 90px;
+    padding-top: 14px;
+    position: relative;
+    margin: 100px 0 82px 0;
+    img{
+        width: 220px;
+        height: 52px;
+        margin: 0 auto;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 32%;
+        background-color: v.$light-5-c;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::after{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 32%;
+        background-color: v.$light-5-c;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.title{
+    @include m.text-character(16px,29px,v.$gray-4-c);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.button-wrapper{
+    @include m.flexibility(column, flex-start,center);
+    gap: 12px;
+
+    button{
+        min-width: 180px;
+        height: 42px;
+        @include m.flexibility(row,center,center);
+        @include m.text-character(14px,29px, v.$gray-4-c);
+        text-transform: uppercase;
+    }
+
+    .change-button{
+        background-color: transparent;
+        border: 1px solid v.$green-1-c;
+    }
+
+    .ahead-button{
+        background-color: v.$green-1-c;
+    }
+}
+
+//Desktop 
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wine-wrapper {
+        height: calcOutValue(196);
+        padding-top: calcOutValue(16);
+        margin: calcOutValue(182) 0 calcOutValue(38) 0;
+
+        img {
+            width: calcOutValue(676);
+            height: calcOutValue(162);
+        }
+
+        &::before {
+            width: 34%;
+            left: auto;
+            right: 0;
+        }
+
+        &::after {
+            width: 34%;
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(28), calcOutValue(40), v.$gray-4-c);
+        margin-bottom: calcOutValue(110);
+    }
+
+    .button-wrapper {
+        @include m.flexibility(row, center, center);
+        gap: calcOutValue(14);
+
+        button {
+            min-width: calcOutValue(346);
+            height: calcOutValue(60);
+            @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-4-c);
+        }
+    }
+}

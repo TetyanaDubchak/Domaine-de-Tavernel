@@ -1,0 +1,229 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.first-wrapper{
+    background-color: v.$gray-4-c;
+    position: relative;
+}
+
+.address-wrapper{
+    padding: 32px 20px 12px 20px;
+
+    & p{
+        @include m.text-character(16px, 32px, v.$light-6-c)
+    }
+}
+
+.nav-list{
+    padding: 12px 20px 0 20px;
+    @include m.flexibility(column, center, flex-start);
+    gap: 4px;
+    margin-bottom: 4px;
+    & a{
+        @include m.text-character(14px, 29px, v.$light-1-c);
+    }
+}
+.conditions-list{
+    padding:0 20px 12px 20px;
+    @include m.flexibility(column, center, flex-start);
+    gap: 4px;
+        & a {
+            @include m.text-character(14px, 29px, v.$light-1-c);
+        }
+}
+
+.social-list{
+    @include m.flexibility(row,flex-start,center);
+    gap: 18px;
+    padding: 24px 20px 18px 20px;
+    & a{
+        border: 1px solid v.$gray-1-c;
+        
+        @include m.flexibility(row, center, center);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+
+        svg{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.top-button{
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    @include m.flexibility(row, center, center);
+    border-radius: 50%;
+    background-color: v.$orange-1-c;
+
+    svg{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.second-wrapper{
+    background-color: v.$dark-c;
+    padding: 2px 20px;
+
+    & p{
+        font-family: 'Poppins',sans-serif;
+        font-weight: 400;
+        @include m.text-character(8px, 20px, v.$light-1-c);
+        opacity: 65%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .contact-list{
+        @include m.visually-hidden;
+    }
+
+    .nav-list{
+        border-top: 1px solid #D2DBE180;
+    }
+
+    .conditions-list{
+        border-bottom: 1px solid #D2DBE180;
+    }
+
+    .developed{
+        @include m.visually-hidden;
+    }
+
+    .tree{
+        @include m.visually-hidden;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .mobile-blog{
+        @include m.visually-hidden;
+    }
+    .first-wrapper{
+        padding: calcOutValue(72) calcOutValue(72) calcOutValue(78) calcOutValue(72);
+    }
+
+    .extra-wrapper{
+        display: flex;
+        align-items: flex-start;
+        column-gap: calcOutValue(118);
+        margin: 0 auto;
+        max-width: calcOutValue(1360);
+    }
+
+    .address-wrapper {
+        padding: 0;
+        max-width: calcOutValue(280);
+        & p {
+            @include m.text-character(calcOutValue(24), calcOutValue(36), v.$light-6-c)
+        }
+    }
+
+    .nav-list {
+        padding: 0;
+        @include m.flexibility(column, center, flex-start);
+        gap: calcOutValue(12);
+
+        & a {
+            @include m.text-character(calcOutValue(24), calcOutValue(36), v.$light-3-c);
+        }
+    }
+
+    .conditions-list {
+        padding: 0;
+        @include m.flexibility(column, center, flex-start);
+        gap: calcOutValue(12);
+
+        & a {
+            @include m.text-character(calcOutValue(24), calcOutValue(36), v.$light-3-c);
+        }
+    }
+
+    .contact-list{
+        @include m.flexibility(column, center,flex-start);
+        gap: calcOutValue(12);
+        & a{
+            display: flex;
+            gap: calcOutValue(8);
+            align-items: center;
+
+            & svg{
+                width: calcOutValue(40);
+                height: calcOutValue(40);
+            }
+
+            & p{
+                font-weight: 600;
+                @include m.text-character(calcOutValue(20), calcOutValue(36), v.$light-3-c);
+            }
+        }
+    }
+
+    .social-list {
+        @include m.flexibility(column, flex-start, center);
+        gap: calcOutValue(12);
+        padding: 0;
+
+        & a {
+            width: calcOutValue(41);
+            height: calcOutValue(41);
+
+            & svg{
+                width: calcOutValue(18);
+                height: calcOutValue(18);
+            }
+        }
+    }
+
+    .top-button {
+        top: calcOutValue(22);
+        right: calcOutValue(80);
+        width: calcOutValue(52);
+        height: calcOutValue(52);
+        & svg{
+            width: calcOutValue(24);
+            height: calcOutValue(24);
+        }
+    }
+
+    .developed{
+        position: absolute;
+        bottom: calcOutValue(18);
+        right: calcOutValue(492);
+        font-weight: 600;
+        @include m.text-character(calcOutValue(16), calcOutValue(36), v.$light-3-c);
+
+        & span{
+            color: v.$orange-1-c;
+        }
+    }
+
+    .tree{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: calcOutValue(180);
+        height: calcOutValue(146);
+    }
+
+    .second-wrapper {
+        background-color: v.$dark-c;
+        padding: calcOutValue(1) calcOutValue(20);
+
+        & p {
+            @include m.text-character(calcOutValue(16), calcOutValue(36), v.$light-1-c);
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

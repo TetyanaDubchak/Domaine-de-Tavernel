@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import s from '../../assets/components/Catalog/FilterAndSortBtnMob.module.scss';
+import s from '../../assets/styles/components/Catalog/FilterAndSortBtnMob.module.scss';
 import { SortModal } from './SortModal';
 import { FilterModal } from './FilterModal';
 

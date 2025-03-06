@@ -2,6 +2,10 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { SharedLayout } from "./components/Header/SharedLayout";
+import { PaymentLayout } from "./components/Header/PaymentLayout";
+import { ContactDetail } from "./components/Payment/ContactDetail";
+import { DeliveryDetail } from "./components/Payment/DeliveryDetail";
+import { PaymentDetail } from "./components/Payment/PaymentDetail";
 import  Main  from "./pages/Main";
 const About = lazy(() => import("./pages/About"));
 const Search = lazy(() => import("./pages/Search"));
@@ -14,6 +18,7 @@ const Product = lazy(() => import("./pages/Product"));
 const Term = lazy(() => import("./pages/Term"));
 
 export const App = () => {
+
   return (
     <Routes>
       <Route path='/' element={<SharedLayout/>}>
@@ -26,8 +31,13 @@ export const App = () => {
         <Route path='blog-page' element={<BlogPage/>}/> 
         <Route path='term' element={<Term />} />
         <Route path='search' element={<Search />} />
-         <Route index element={<Main />} />
+        <Route index element={<Main />} />
       </Route>
+    <Route path='/payment' element={<PaymentLayout />}>
+        {/* <Route index element={< ContactDetail />} />
+        <Route path='delivery' element={< DeliveryDetail />} />
+        <Route path='pay' element={< PaymentDetail/>} /> */}
+    </Route>
     </Routes>
    );
 };

@@ -1,5 +1,5 @@
 
-import s from '../../assets/components/Catalog/Checkfilter.module.scss';
+import s from '../../assets/styles/components/Catalog/Checkfilter.module.scss';
 
 export const Checkfilter = ({list}) => {
     

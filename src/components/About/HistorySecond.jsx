@@ -3,7 +3,7 @@ import img2mob from "../../assets/images/about/history/second/img2-mob.png";
 import img1desc from "../../assets/images/about/history/second/img1-desc.png";
 import img2desc from "../../assets/images/about/history/second/img2-desc.png";
 
-import s from '../../assets/components/About/HistorySecond.module.scss';
+import s from '../../assets/styles/components/About/HistorySecond.module.scss';
 
 export const HistorySecond = () => {
     return (

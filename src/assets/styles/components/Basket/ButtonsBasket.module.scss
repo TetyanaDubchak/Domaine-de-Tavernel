@@ -1,0 +1,46 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    padding: 16px 16px 32px 16px;
+    @include m.flexibility(row, space-between,center);
+}
+
+.continue-btn{
+    border: 1px solid v.$green-1-c;
+    @include m.text-character(14px,29px,v.$green-2-c);
+    text-transform: uppercase;
+    padding: 6px 20px;
+    background-color: transparent;
+}
+
+.checkout-btn{
+    border: 1px solid v.$light-5-c;
+    @include m.text-character(14px, 29px, v.$gray-1-c);
+    text-transform: uppercase;
+    padding: 6px 32px;
+    background-color: v.$light-5-c;
+}
+
+.checkout-btn.is-checked{
+    background-color: v.$green-1-c;
+    color: v.$gray-4-c;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        padding: calcOutValue(32) calcOutValue(52) calcOutValue(36) calcOutValue(52);
+    }
+
+    .continue-btn {
+        @include m.text-character(calcOutValue(16), calcOutValue(36), v.$green-2-c);
+        padding: calcOutValue(12) calcOutValue(38);
+    }
+
+    .checkout-btn {
+        @include m.text-character(calcOutValue(16),calcOutValue(36), v.$gray-1-c);
+        padding: calcOutValue(12) calcOutValue(64);
+    }
+}

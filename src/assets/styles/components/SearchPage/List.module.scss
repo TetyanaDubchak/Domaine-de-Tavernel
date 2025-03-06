@@ -1,0 +1,13 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+
+    &> div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

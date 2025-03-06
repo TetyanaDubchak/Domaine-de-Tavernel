@@ -1,5 +1,5 @@
 
-import s from "../../assets/components/Product/PriceContainer.module.scss";
+import s from "../../assets/styles/components/Product/PriceContainer.module.scss";
 
 export const PriceContainer = () => {
 

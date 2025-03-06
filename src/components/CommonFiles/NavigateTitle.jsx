@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import s from '../../assets/components/CommonFiles/NavigateTitle.module.scss';
+import s from '../../assets/styles/components/CommonFiles/NavigateTitle.module.scss';
 
 export const Navigation = ({page,page1, link1, page2,link2,details}) => {
     return (

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import s from '../../assets/components/Catalog/FilterModal.module.scss';
+import s from '../../assets/styles/components/Catalog/FilterModal.module.scss';
 import close from '../../assets/images/catalog/close.svg';
 import { FilterList } from './FilterList';
 

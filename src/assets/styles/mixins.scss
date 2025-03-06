@@ -147,3 +147,14 @@
         justify-content: center;
         background-color: $color;
 }
+
+@mixin decor-line-payment($bottom: 0 ){
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #D7D7D7;
+    position: absolute;
+    left: 0;
+    bottom: $bottom;
+}

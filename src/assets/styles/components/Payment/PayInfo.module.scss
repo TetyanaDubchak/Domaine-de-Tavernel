@@ -1,0 +1,20 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.text{
+    font-family: 'Montserrat', sans-serif;
+    @include m.text-character(12px,27px, v.$gray-3-c);
+}
+
+.link{
+    color: v.$orange-1-c;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .text {
+        @include m.text-character(calcOutValue(14), calcOutValue(27), v.$gray-3-c);
+        }
+}

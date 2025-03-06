@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import s from '../../assets/components/SearchPage/SortButton.module.scss';
+import s from '../../assets/styles/components/SearchPage/SortButton.module.scss';
 import { SortModal } from '../Catalog/SortModal';
 
 export const SortButton = () => {

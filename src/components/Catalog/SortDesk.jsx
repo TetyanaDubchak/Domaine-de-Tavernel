@@ -1,5 +1,5 @@
 
-import s from '../../assets/components/Catalog/SortDesk.module.scss';
+import s from '../../assets/styles/components/Catalog/SortDesk.module.scss';
 import  arrowBtn  from "../../assets/images/catalog/arrow-bot.svg";
 import { useState } from 'react';
 

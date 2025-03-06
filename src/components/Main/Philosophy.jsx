@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import s from "../../assets/components/Main/Philosophy.module.scss";
+import s from "../../assets/styles/components/Main/Philosophy.module.scss";
 
 export const Philosophy = () => {
     return ( 

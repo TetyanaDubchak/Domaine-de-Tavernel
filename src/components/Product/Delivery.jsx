@@ -1,4 +1,4 @@
-import s from "../../assets/components/Product/Delivery.module.scss";
+import s from "../../assets/styles/components/Product/Delivery.module.scss";
 
 export const Delivery = () => {
 

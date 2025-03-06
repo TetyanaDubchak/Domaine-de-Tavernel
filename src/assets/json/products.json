@@ -10,7 +10,9 @@
     "image": "../../../assets/images/catalog/products/product-1.png",
     "new": false,
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "image": "../images/catalog/products/product-1.png",
     "new": true,
     "sale": true,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "white",
+    "year": "2023"
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
     "image": "../images/catalog/products/product-1.png",
     "new": false,
     "sale": false,
-    "lastPrice": 75
+    "lastPrice": 75,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
     "image": "../images/catalog/products/product-1.png",
     "new": false,
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
     "image": "../images/catalog/products/product-1.png",
     "new": false,
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 6,
@@ -75,7 +85,9 @@
     "image": "../images/catalog/products/product-1.png",
     "new": false,
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 7,
@@ -87,7 +99,9 @@
     "review": 34,
     "image": "../images/catalog/products/product-1.png",
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 8,
@@ -99,7 +113,9 @@
     "review": 34,
     "image": "../images/catalog/products/product-1.png",
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 9,
@@ -111,7 +127,9 @@
     "review": 34,
     "image": "../images/catalog/products/product-1.png",
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   },
   {
     "id": 10,
@@ -123,6 +141,8 @@
     "review": 34,
     "image": "../images/catalog/products/product-1.png",
     "sale": false,
-    "lastPrice": 0
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023"
   }
 ]

@@ -1,0 +1,68 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    position: relative;
+    max-height: 400px;
+}
+
+.picture{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.pagination {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    bottom: 30px !important;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .prev-btn {
+        @include m.visually-hidden;
+        display: none;
+    }
+
+    .next-btn {
+        @include m.visually-hidden;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m){
+
+    .wrapper{
+        max-height: calcOutValue(400);
+    }
+
+    .prev-btn{
+        width: calcOutValue(80);
+        height: calcOutValue(80);
+        @include m.border(1px, solid, v.$gray-3-c);
+        border-radius: 50%;
+        background-color: transparent;
+        &::after{
+            content: '';
+        }
+    }
+
+    .next-btn{
+        width: calcOutValue(80);
+        height: calcOutValue(80);
+        @include m.border(1px, solid, v.$gray-3-c);
+        border-radius: 50%;
+        background-color: transparent;
+        &::after{
+            content: '';
+        }
+    }
+    
+    .pagination{
+        bottom: calcOutValue(22);
+    }
+}

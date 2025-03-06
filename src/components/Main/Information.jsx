@@ -1,4 +1,4 @@
-import s from '../../assets/components/Main/Information.module.scss';
+import s from '../../assets/styles/components/Main/Information.module.scss';
 
 export const Information = () => {
     return (

@@ -1,4 +1,4 @@
-import s from '../../assets/components/SearchPage/NotFound.module.scss';
+import s from '../../assets/styles/components/SearchPage/NotFound.module.scss';
 import bottle from '../../assets/images/search/wine-bottle.png';
 
 export const NotFound = () => {

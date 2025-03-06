@@ -1,5 +1,5 @@
 import list from "../../assets/json/products.json";
-import s from '../../assets/components/Catalog/ProductsList.module.scss';
+import s from '../../assets/styles/components/Catalog/ProductsList.module.scss';
 import picture from '../../assets/images/catalog/products/product-1.png';
 import { Icon } from "components/CommonFiles/Icon";
 
@@ -33,7 +33,12 @@ export const ProductsList = () => {
                         </div>
                         <button className={s['like-button']} type='button'><Icon className={s['heart-icon']} type='heart-light'/></button>
                         {item.new ? <div className={s['new-sign']}>new</div> : ''}
-                        {item.sale? <div className={s['sale-sign']}>sale</div>: ''}
+                        {item.sale ? <div className={s['sale-sign']}>sale</div> : ''}
+                        <div className={s['extra-information']}>
+                            <p>Color: <span>{item.color}</span></p>  
+                            <p>Sweetness: <span>{item.taste}</span></p>
+                            <p>Vintage year: <span>{item.year }</span></p>    
+                        </div>
                         </Link> 
                     </li>
                 })}

@@ -1,4 +1,4 @@
-import s from '../../assets/components/Contacts/Social.module.scss';
+import s from '../../assets/styles/components/Contacts/Social.module.scss';
 import { Icon } from 'components/CommonFiles/Icon';
 
 export const Social = () => {

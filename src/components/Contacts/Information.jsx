@@ -1,6 +1,6 @@
 import street from "../../assets/images/contacts/content.png";
 
-import s from '../../assets/components/Contacts/Information.module.scss';
+import s from '../../assets/styles/components/Contacts/Information.module.scss';
 
 export const Information = () => {
     return (
@@ -15,7 +15,7 @@ export const Information = () => {
                     <p className={s['info-text']}>We are located at <span>Route de Fourques - 1479, Chemin de Tavernel - 30300 Beaucaire, France</span>,  in the heart of the historic 6th arrondissement of Paris. You can contact us by phone  or through our social media channels.</p>
                     <div className={s['phone-wrapper']}>
                         <p className={s['phone-text']}>Phone number</p>
-                        <p className={s['phone-number']}>+04 66 58 57 01</p>
+                        <p className={s['phone-number']}><a href="tel:+04 66 58 57 01">+04 66 58 57 01</a></p>
                     </div>
                 </div>
             </div>

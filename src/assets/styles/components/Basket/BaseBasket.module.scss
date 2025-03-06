@@ -1,0 +1,46 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.info-wrapper{
+    overflow-y: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 16px 10px 16px;
+}
+
+.delete{
+    @include m.text-character(14px,29px, v.$gray-3-c);
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.min-value{
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .wrapper {
+        padding: calcOutValue(20) calcOutValue(54) calcOutValue(2) calcOutValue(54);
+    }
+
+    .delete {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-3-c);
+    }
+
+    .min-value {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+        padding: 0 calcOutValue(54);
+    }
+}

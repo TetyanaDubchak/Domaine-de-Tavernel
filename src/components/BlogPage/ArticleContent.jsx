@@ -2,7 +2,7 @@ import recomm1 from "../../assets/images/blog_page/article-1.png";
 import recomm2 from "../../assets/images/blog_page/article-2.jpg";
 import decorPhoto from "../../assets/images/blog_page/decor-photo.png";
 
-import s from '../../assets/components/BlogPage/ArticleContent.module.scss';
+import s from '../../assets/styles/components/BlogPage/ArticleContent.module.scss';
 
 export const ArticleContent = () => {
     return (

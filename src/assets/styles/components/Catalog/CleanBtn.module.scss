@@ -1,0 +1,63 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    padding: 0 20px;
+    @include m.flexibility(row, flex-start, center);
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.filter-btn{
+    background-color: v.$light-5-c;
+    padding: 4px 12px;
+    @include m.flexibility(row, flex-start,center);
+    column-gap: 12px;
+    
+    & p{
+        @include m.text-character(14px,29px,v.$gray-4-c);
+    }
+
+    & img{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media screen and (max-width: v.$max-mob-m) {
+    .clean-btn {
+        @include m.visually-hidden;
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .clean-btn{
+        background-color: transparent;
+        border: 1px solid v.$light-5-c;
+        padding: calcOutValue(14) calcOutValue(20);
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-4-c);
+    }
+    .wrapper{
+        padding: 0;
+        gap: calcOutValue(10);
+        max-width: calcOutValue(850);
+        
+    }
+
+    .filter-btn{
+        padding: calcOutValue(14) calcOutValue(16);
+        column-gap: calcOutValue(14);
+        
+        & p{
+            @include m.text-character(calcOutValue(20),calcOutValue(32),v.$gray-4-c);
+        }
+        & img{
+            width: calcOutValue(16);
+            height: calcOutValue(16);
+    }
+    }
+}

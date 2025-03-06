@@ -3,7 +3,7 @@ import { FilterAndSortBtnMob } from "./FilterAndSortBtnMob"
 import { FilterDesk } from "./FilterDesk"
 import { ProductsList } from "./ProductsList"
 import { SortDesk } from "./SortDesk"
-import s from '../../assets/components/Catalog/ProductsSection.module.scss'
+import s from '../../assets/styles/components/Catalog/ProductsSection.module.scss'
 import { CleanBtn } from "./CleanBtn"
 
 export const ProductsSection = () => {

@@ -4,7 +4,7 @@ import { Characteristic } from "./Characteristic";
 import { PhotoSlider } from "./PhotoSlider";
 import { PriceContainer } from "./PriceContainer";
 import { Title } from "./Title";
-import s from "../../assets/components/Product/ProductInfo.module.scss";
+import s from "../../assets/styles/components/Product/ProductInfo.module.scss";
 
 export const ProductInfo = () => {
     const [isLikeSet, setIsLikeSet] = useState(false);

@@ -1,0 +1,135 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    padding: 32px 20px 86px 20px;
+    position: relative;
+
+    &::after{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: v.$light-5-c;
+        position: absolute;
+        bottom: 86px;
+        left: 0;
+    }
+}
+
+.main-title{
+    font-family: 'Montserrat', sans-serif;
+    @include m.text-character(14px,27px, v.$gray-4-c);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.form {
+    @include m.flexibility(column, flex-start, flex-start);
+}
+
+.contact-data-wrapper {
+    position: relative;
+    @include m.flexibility(column, flex-start, flex-start);
+    width: 100%;
+    height: 40px;
+    margin-bottom: 18px;
+
+    &:last-of-type {
+        margin-bottom: 32px;
+    }
+}
+
+.contact-data-title {
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    font-family: "Montserrat", sans-serif;
+    @include m.text-character(12px, 27px, v.$gray-2-c);
+    transition: all 0.3s ease-out;
+}
+
+.contact-data-input {
+    padding: 6px 16px;
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid v.$light-5-c;
+    font-family: "Montserrat", sans-serif;
+    @include m.text-character(12px, 27px, v.$gray-4-c);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.contact-data-input.is-value+.contact-data-title {
+    font-size: 8px;
+    top: -10px;
+    left: 0;
+    opacity: 80%;
+}
+
+.contact-data-wrapper:focus-within {
+    .contact-data-title {
+        font-size: 8px;
+        top: -10px;
+        left: 0;
+        opacity: 80%;
+    }
+}
+
+
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .wrapper {
+        padding: calcOutValue(36) calcOutValue(234) calcOutValue(174) calcOutValue(116);
+        
+            &::after {
+                bottom: calcOutValue(104);
+            }
+    }
+
+    .main-title {
+        @include m.text-character(calcOutValue(24), calcOutValue(50), v.$gray-4-c);
+        font-weight: 400;
+        text-transform: none;
+        margin-bottom: calcOutValue(34);
+    }
+
+    .contact-data-wrapper {
+        height: calcOutValue(56);
+        margin-bottom: calcOutValue(40);
+        &:last-of-type {
+            margin-bottom: 0;
+            }
+    }
+
+    .contact-data-title {
+        top: calcOutValue(14);
+        left: calcOutValue(16);
+        @include m.text-character(calcOutValue(16), calcOutValue(27), v.$gray-2-c);
+    }
+
+    .contact-data-input {
+        padding: calcOutValue(14) calcOutValue(16);
+        @include m.text-character(calcOutValue(16), calcOutValue(27), v.$gray-4-c);
+    }
+
+    .contact-data-input.is-value+.contact-data-title {
+        font-size: calcOutValue(12);
+        top: calcOutValue(-10);
+    }
+
+    .contact-data-wrapper:focus-within {
+        .contact-data-title {
+            font-size: calcOutValue(12);
+            top: calcOutValue(-10);
+        }
+    }
+}

@@ -9,7 +9,7 @@ const Blog = () => {
     return (
         <main>
             <Hero bg={bg} /> 
-            <Navigation page='Blog' page1='About Company' link1='about' />
+            <Navigation page='Blog'/>
             <Articles/>
         </main>
     )

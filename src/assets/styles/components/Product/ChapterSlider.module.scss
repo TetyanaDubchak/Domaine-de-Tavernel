@@ -1,0 +1,79 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+
+.item{
+    width: 110px;
+    @include m.flexibility(row,center,center);
+
+    button{
+        @include m.text-character(14px,29px,v.$gray-2-c);
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+.visible{
+
+    button{
+       color: v.$gray-4-c; 
+    }
+    
+    &::after{
+        position: absolute;
+        bottom: 0px;
+        z-index: 10;
+        display: block;
+        content: '';
+        background-color: v.$orange-1-c;
+        width: 0;
+        height: 3px;
+        margin-top: 1px;
+        transition: width 0.5s ease-in-out;
+    }
+        &.visible::after {
+            width:  100%;
+        }
+}
+
+.swiper-wrapper{
+    border-bottom: 1px solid v.$light-5-c;
+    margin-bottom: 32px;
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+.characteristic-wrapper{
+    @include m.visually-hidden;
+    }
+.item{
+    width: calcOutValue(162);
+
+    button{
+        @include m.text-character(calcOutValue(24),calcOutValue(40),v.$gray-2-c);
+    }
+    &:first-of-type{
+        @include m.visually-hidden;
+    }
+}
+
+.visible{
+
+    button{
+       color: v.$gray-4-c; 
+    }
+    
+    &::after{
+        height: calcOutValue(3);
+    }
+}
+
+.swiper-wrapper{
+    margin-bottom: calcOutValue(24);
+    display: flex;
+    justify-content: center;
+}
+}

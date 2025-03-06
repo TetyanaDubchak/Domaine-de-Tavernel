@@ -1,4 +1,4 @@
-import s from "../../assets/components/Main/Tradition.module.scss";
+import s from "../../assets/styles/components/Main/Tradition.module.scss";
 
 import tradition from "../../assets/images/main/tradition/tradition.png";
 import tradition2x from "../../assets/images/main/tradition/tradition@2x.png";

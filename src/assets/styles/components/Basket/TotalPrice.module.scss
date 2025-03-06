@@ -1,0 +1,66 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    padding: 16px;
+    border-bottom: 1px solid v.$light-3-c;
+    border-top: 1px solid v.$light-3-c;
+    margin-top: auto;
+}
+
+.extra-wrapper{
+    @include m.flexibility(row,space-between,center);
+    &:not(:last-of-type){
+        margin-bottom: 6px;
+    }
+}
+
+.title-taxes{
+    @include m.text-character(16px,29px,v.$gray-3-c);
+}
+
+.price-taxes{
+    font-family: "Montserrat",sans-serif;
+    @include m.text-character(14px, 27px, v.$gray-3-c);
+}
+
+.title-total{
+    @include m.text-character(16px, 29px, v.$gray-4-c);
+    font-weight: 600;
+}
+
+.price-total{
+    font-family: "Montserrat", sans-serif;
+    @include m.text-character(14px, 27px, v.$gray-4-c);
+    font-weight: 500;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        padding: calcOutValue(16) calcOutValue(54) calcOutValue(14) calcOutValue(54);
+    }
+
+    .extra-wrapper:not(:last-of-type) {
+        margin-bottom: calcOutValue(16);
+    }
+    
+
+    .title-taxes {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-3-c);
+    }
+
+    .price-taxes {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-3-c);
+    }
+
+    .title-total {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+    }
+
+    .price-total {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+        font-weight: 600;
+    }
+}

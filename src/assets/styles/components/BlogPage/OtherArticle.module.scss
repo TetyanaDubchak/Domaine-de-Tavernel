@@ -1,0 +1,207 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper {
+    background-color: v.$light-3-c;
+    padding: 0 0 56px 20px;
+    width: 100%;
+    position: relative;
+}
+
+.title-wrapper {
+    position: relative;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 12px;
+}
+
+.title {
+    @include m.text-character(20px, 36px, v.$gray-4-c);
+    font-style: italic;
+}
+
+.line {
+    border-bottom: 1px solid v.$light-4-c;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-bottom: 10px;
+}
+
+.list {
+    margin-bottom: 24px;
+}
+
+.item {
+    max-width: 250px;
+    min-height: 398px !important;
+    background-color: v.$light-4-c;
+}
+
+.article-picture-wrapper{
+    position: relative;
+    width: 100%;
+    height: 190px;
+    & img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.article-wrapper{
+    padding: 18px 20px 32px 20px;
+}
+
+.article-title{
+    @include m.text-character(14px,29px,v.$gray-4-c);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.article-date{
+    @include m.text-character(14px, 29px, v.$gray-2-c);
+    margin-bottom: 18px;
+}
+
+.article-button{
+    @include m.text-character(16px, 29px, v.$gray-4-c);
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    @include m.flexibility(row,flex-start, center);
+    gap: 6px;
+    & img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.pagination-wrapper {
+    position: relative;
+    width: calc(100% - 20px);
+    margin-right: auto;
+}
+
+@media screen and (max-width: 990px) {
+    .prev-btn {
+        @include m.visually-hidden;
+    }
+
+    .next-btn {
+        @include m.visually-hidden;
+    }
+
+    .pagination-bullet {
+        @include m.visually-hidden;
+    }
+}
+
+// Desktop styles
+@media screen and (min-width: v.$b-tablet-m) {
+
+    .wrapper {
+        padding: 0 calcOutValue(280) calcOutValue(210) calcOutValue(280);
+    }
+
+    .title-wrapper {
+        margin-bottom: calcOutValue(48);
+        gap: calcOutValue(24);
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(36), calcOutValue(32), v.$dark-c);
+    }
+
+    .line {
+        border-bottom: 1px solid v.$light-6-c;
+        margin-bottom: calcOutValue(6);
+    }
+
+    .list {
+        margin-bottom: calcOutValue(0);
+    }
+
+    .item {
+        max-width: calcOutValue(440);
+        min-height: calcOutValue(700) !important;
+        background-color: v.$light-5-c;
+    }
+
+    .article-picture-wrapper {
+        height: calcOutValue(412);
+    }
+
+    .article-wrapper {
+        padding: calcOutValue(36) calcOutValue(28) calcOutValue(36) calcOutValue(28);
+    }
+
+    .article-title {
+        @include m.text-character(calcOutValue(28), calcOutValue(40), v.$gray-3-c);
+        margin-bottom: calcOutValue(16);
+    }
+
+    .article-date {
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-2-c);
+        margin-bottom: calcOutValue(48);
+    }
+
+    .article-button {
+        @include m.text-character(calcOutValue(20), calcOutValue(36), v.$gray-4-c);
+        gap: calcOutValue(1);
+
+        & img {
+            width: calcOutValue(20);
+            height: 20;
+        }
+    }
+
+    .pagination-wrapper {
+        @include m.visually-hidden;
+    }
+
+    .prev-btn {
+        @include m.swiper-btn-reset-l(calcOutValue(780),calcOutValue(120),calcOutValue(54), calcOutValue(54));
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .prev-btn:after {
+        content: '';
+    }
+
+    .next-btn:after {
+        content: '';
+    }
+
+    .next-btn {
+        @include m.swiper-btn-reset-r(calcOutValue(780), calcOutValue(120), calcOutValue(54), calcOutValue(54));
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .pagination-bullet {
+        position: absolute;
+        bottom: calcOutValue(142) !important;
+        top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .swiper-pagination-bullet {
+            width: calcOutValue(8);
+            height: calcOutValue(8);
+            background-color: #D9D9D9;
+            opacity: 1;
+            transition: background-color 0.3s ease;
+        }
+    }
+}

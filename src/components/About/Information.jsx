@@ -1,5 +1,5 @@
 
-import s from '../../assets/components/About/Information.module.scss';
+import s from '../../assets/styles/components/About/Information.module.scss';
 
 export const Information = () => {
     return (

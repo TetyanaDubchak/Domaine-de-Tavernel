@@ -1,0 +1,81 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.checkbox-wrapper {
+    background-color: v.$light-3-c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include m.flexibility(row, center, center);
+    position: relative;
+
+    .checkbox-decor {
+        display: block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid v.$gray-2-c;
+        background-color: v.$light-3-c;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+.checkbox {
+    @include m.visually-hidden;
+}
+
+.checkbox:checked+.checkbox-decor {
+    background-image: url(../../../images/contacts/checked.svg);
+    background-color: v.$orange-1-c;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: v.$orange-1-c;
+}
+
+.policy-data-wrapper {
+    @include m.flexibility(row, flex-start, center);
+    gap: 4px;
+    margin-bottom: 18px;
+}
+
+.policy-text {
+    @include m.text-character(14px, 20px, v.$gray-3-c);
+
+    & a {
+        color: v.$gray-4-c;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+
+.checkbox-wrapper {
+    width: calcOutValue(40);
+    height: calcOutValue(40);
+
+    .checkbox-decor {
+        width: calcOutValue(18);
+        height: calcOutValue(18);
+        border: calcOutValue(2) solid v.$gray-2-c;
+    }
+}
+
+.checkbox:checked+.checkbox-decor {
+    background-size: calcOutValue(24) calcOutValue(24);
+}
+
+.policy-data-wrapper {
+    gap: calcOutValue(6);
+    margin-bottom: calcOutValue(22);
+}
+
+.policy-text {
+    @include m.text-character(calcOutValue(16), calcOutValue(20), v.$gray-3-c);
+}
+}

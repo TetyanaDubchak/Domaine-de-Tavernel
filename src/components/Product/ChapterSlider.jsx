@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/Product/ChapterSlider.module.scss";
+import s from "../../assets/styles/components/Product/ChapterSlider.module.scss";
 import { useState } from 'react';
 import { Characteristic } from './Characteristic';
 import { Description } from './Description';

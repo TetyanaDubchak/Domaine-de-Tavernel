@@ -1,5 +1,5 @@
 
-import s from '../../assets/components/BlogPage/Title.module.scss';
+import s from '../../assets/styles/components/BlogPage/Title.module.scss';
 
 export const Title = () => {
     return (

@@ -1,0 +1,37 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper{
+    margin-bottom: 60px;
+    @include m.flexibility(row,center,center);
+    gap: 8px;
+}
+
+.title{
+    @include m.text-character(14px,29px,v.$gray-3-c);
+}
+
+.btn{
+    background-color: transparent;
+    padding: 0;
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .wrapper {
+        margin-bottom: calcOutValue(98);
+        gap: calcOutValue(8);
+    }
+
+    .title {
+        @include m.text-character(calcOutValue(20), calcOutValue(32), v.$gray-3-c);
+    }
+
+    .btn {
+        @include m.text-character(calcOutValue(20), calcOutValue(36), v.$gray-4-c);
+    }
+}

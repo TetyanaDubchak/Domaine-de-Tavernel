@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/Gallery/Albums.module.scss";
+import s from "../../assets/styles/components/Gallery/Albums.module.scss";
 
 import img1 from '../../assets/images/gallery/albums/album-1.png';
 import img2 from '../../assets/images/gallery/albums/album-2.png';
@@ -40,7 +40,7 @@ export const Albums = () => {
                     nextEl: `.${s['next-btn']}`,
                 }}
                 pagination={{
-                    el: `.${s['pagination-wrapper']} .${s.pagination}`,
+                    el: `.${s['pagination-wrapper']}`,
                     type: 'progressbar',
                 }}
                 breakpoints={{
@@ -116,13 +116,11 @@ export const Albums = () => {
             <button className={`swiper-button-next ${s['next-btn']}`} type="button">
                 <img src={btn2} alt="button" />
             </button>
-            <div className={s['pagination-wrapper']}>
-                <div className={s.pagination}>
+            <div className={`${s['pagination-wrapper']} ${['progressbar-wrapper-products']}`}>
                     <span className={s['swiper-pagination-progressbar-fill']}>
                     </span>
-                </div>
             </div>
-            <div className={s['pagination-bullet']}></div>
+            <div className={`${s['pagination-bullet']} ${['bullet-wrapper-gallery']}`}></div>
         </section>
     );
 }

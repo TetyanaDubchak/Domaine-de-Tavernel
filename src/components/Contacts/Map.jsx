@@ -3,7 +3,7 @@ import { GoogleMap, Marker,useLoadScript } from "@react-google-maps/api";
 import img from '../../assets/images/contacts/street-location.png';
 import markerImg from '../../assets/images/contacts/marker.png';
 
-import s from '../../assets/components/Contacts/Map.module.scss';
+import s from '../../assets/styles/components/Contacts/Map.module.scss';
 
 const API_KEY = 'AIzaSyAU0-crRrFzivOpIFCJSJLN5sziZBA2ip8';
 
@@ -40,6 +40,7 @@ const mapStyles = [
   },
 ];
 
+
 const mapOptions = {
   styles: mapStyles,
   disableDefaultUI: true,
@@ -73,8 +74,12 @@ export const Map = () => {
                             domaine@tavernel.fr
                         </a></li>
                         </ul>
-                </div> 
+                </div>
             </div>
         </section>
     )
 }
+
+
+
+

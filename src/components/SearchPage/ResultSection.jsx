@@ -1,4 +1,4 @@
-import s from '../../assets/components/SearchPage/ResultSection.module.scss'
+import s from '../../assets/styles/components/SearchPage/ResultSection.module.scss'
 import { NotFound } from './NotFound'
 import { SortButton } from './SortButton'
 import { Title } from './Title'

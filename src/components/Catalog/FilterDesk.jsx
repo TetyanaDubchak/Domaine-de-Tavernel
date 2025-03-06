@@ -1,5 +1,5 @@
 
-import s from '../../assets/components/Catalog/FilterDesk.module.scss';
+import s from '../../assets/styles/components/Catalog/FilterDesk.module.scss';
 import { FilterList } from './FilterList';
 
 

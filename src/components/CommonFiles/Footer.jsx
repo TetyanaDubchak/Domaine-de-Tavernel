@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 
-import s from "../../assets/components/CommonFiles/Footer.module.scss";
+import s from "../../assets/styles/components/CommonFiles/Footer.module.scss";
 
 import tree from '../../assets/images/main/tree-all.svg';
 import { Icon } from "./Icon";
@@ -52,9 +52,9 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <p className={s.developed}>Developed by <span>GETWOW</span></p>
-                <button className={s['top-button']} type="button">
+                <a className={s['top-button']} href="#top">
                     <Icon type='arrow-top'/>
-                </button>
+                </a>
                 <div className={s.tree}><img src={tree} alt="tree and house" /></div>
             </div>
             <div className={s['second-wrapper']}>

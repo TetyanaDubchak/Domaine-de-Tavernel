@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import s from '../../assets/components/About/ToBlog.module.scss';
+import s from '../../assets/styles/components/About/ToBlog.module.scss';
 
 export const ToBlog = () => {
     return (

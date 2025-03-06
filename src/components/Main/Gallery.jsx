@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/Main/Gallery.module.scss";
+import s from "../../assets/styles/components/Main/Gallery.module.scss";
 
 import img1 from '../../assets/images/main/gallery/img1.jpg';
 import img2 from '../../assets/images/main/gallery/img2.jpg';
@@ -80,7 +80,7 @@ export const Gallery = () => {
                     <img src={btn2} alt="arrow" />
                 </button>
             </div>
-            <div className={s['pagination-bullet']}></div>
+            <div className={`${s['pagination-bullet']} ${['bullet-wrapper-light']}`}></div>
         </section>
     )
 }

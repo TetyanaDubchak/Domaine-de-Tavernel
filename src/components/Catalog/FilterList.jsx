@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import s from '../../assets/components/Catalog/FilterList.module.scss';
+import s from '../../assets/styles/components/Catalog/FilterList.module.scss';
 import minus from '../../assets/images/catalog/minus-element.svg';
 import plus from '../../assets/images/catalog/plus-element.svg';
 import { Checkfilter } from './Checkfilter';

@@ -1,6 +1,6 @@
 
 import { Icon } from "components/CommonFiles/Icon";
-import s from "../../assets/components/Product/Title.module.scss";
+import s from "../../assets/styles/components/Product/Title.module.scss";
 import { StarsRating } from "components/CommonFiles/StarsRating";
 
 export const Title = ({isLike,setLike}) => {

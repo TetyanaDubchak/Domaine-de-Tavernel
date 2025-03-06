@@ -1,17 +1,27 @@
-import { useEffect } from 'react';
+import { Transition } from 'react-transition-group';
+import { useEffect,useRef  } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import closeBtn from '../../assets/images/header/close.svg';
 
-import s from '../../assets/components/CommonFiles/MobileMenu.module.scss';
+import s from '../../assets/styles/components/CommonFiles/MobileMenu.module.scss';
 
-export const MobileMenu = ({ onClose, favorite = 0 }) => {
-    
-    useEffect(() => {
-            document.body.style.overflow = "hidden";
-            return () => {
-                document.body.style.overflow = "auto";
-            };
-        }, []);
+const duration = 300;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out, transform ${duration}ms ease-in-out`,
+  opacity: 0,
+  transform: 'scale(0.95)',
+};
+
+const transitionStyles = {
+  entering: { opacity: 1, transform: 'scale(1)' },
+  entered:  { opacity: 1, transform: 'scale(1)' },
+  exiting:  { opacity: 0, transform: 'scale(0.95)' },
+  exited:  { opacity: 0, transform: 'scale(0.95)' },
+};
+
+export const MobileMenu = ({in: inProp, onClose, favorite = 0 }) => {
+    const nodeRef = useRef(null);
     
     useEffect(() => {
     const handleKeyDown = (e) => {
@@ -26,24 +36,29 @@ export const MobileMenu = ({ onClose, favorite = 0 }) => {
     }, [onClose]);
     
     return (
-        <div className={s.wrapper}>
-            <div className={s['top-wrapper']}>
+        <Transition nodeRef={nodeRef} in={inProp} timeout={duration} unmountOnExit>
+            {state => (
+                <div className={s.wrapper} ref={nodeRef} style={{
+                ...defaultStyle,
+                ...transitionStyles[state]
+                }}>
+                 <div className={s['top-wrapper']}>
                 <h3 className={s['title']}> Menu</h3>
                 <button onClick={onClose} className={s['close-btn']} type='button'><img src={closeBtn} alt="close button" /></button>
             </div>
             <div className={s['navigation-wrapper']}>
                 <nav className={s.navigation}>
-                        <NavLink onClick={onClose} to='/about'>About Company</NavLink>
-                        <NavLink onClick={onClose} to='/gallery'>Gallery</NavLink>
-                        <NavLink onClick={onClose} to='/blog'>Blog</NavLink>
-                        <NavLink onClick={onClose} to='/catalog'>Shop</NavLink>
-                        <NavLink onClick={onClose} to='/contacts'>Сontacts</NavLink>
+                        <NavLink className={s['navigate-link']} onClick={onClose} to='/about'>About Company</NavLink>
+                        <NavLink className={s['navigate-link']} onClick={onClose} to='/gallery'>Gallery</NavLink>
+                        <NavLink className={s['navigate-link']} onClick={onClose} to='/blog'>Blog</NavLink>
+                        <NavLink className={s['navigate-link']} onClick={onClose} to='/catalog'>Shop</NavLink>
+                        <NavLink className={s['navigate-link']} onClick={onClose} to='/contacts'>Сontacts</NavLink>
                     </nav>
             </div>
                 <ul className={s['user-list']}>
-                    <li className={s['user-item']}><Link onClick={onClose} className={s['user-link']}>Favorite <span>/</span>  <p>{ favorite}</p></Link> </li>
-                    <li className={s['user-item']}><Link onClick={onClose} className={s['user-link']}>FAQ</Link></li>
-                    <li className={s['user-item']}><Link onClick={onClose} className={s['user-link']}>order hisrory</Link></li>
+                    <li className={s['user-item']}><Link onClick={onClose} className={`${s['user-link']} ${s['navigate-link']}` }>Favorite <span>/</span>  <p>{ favorite}</p></Link> </li>
+                    <li className={s['user-item']}><Link onClick={onClose} className={`${s['user-link']} ${s['navigate-link']}`}>FAQ</Link></li>
+                    <li className={s['user-item']}><Link onClick={onClose} className={`${s['user-link']} ${s['navigate-link']}`}>order hisrory</Link></li>
                 </ul>
          
             <div className={s['language-wrapper']}>
@@ -53,5 +68,7 @@ export const MobileMenu = ({ onClose, favorite = 0 }) => {
                 </ul>
             </div>
         </div>
+      )}
+        </Transition>
     )
 }

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "The French Touch",
+    "available": true,
+    "price": 75,
+    "taste": "sweet",
+    "stars": 2,
+    "review": 34,
+    "image": "../../../assets/images/catalog/products/product-1.png",
+    "new": false,
+    "sale": false,
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "The French Touch",
+    "available": true,
+    "price": 75,
+    "taste": "sweet",
+    "stars": 2,
+    "review": 34,
+    "image": "../../../assets/images/catalog/products/product-1.png",
+    "new": false,
+    "sale": false,
+    "lastPrice": 0,
+    "color": "red",
+    "year": "2023",
+    "quantity": 1
+  }
+]

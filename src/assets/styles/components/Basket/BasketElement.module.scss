@@ -1,0 +1,163 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.list{
+    padding: 0 16px;
+}
+
+.item{
+    background-color: v.$light-4-c;
+    padding: 14px 10px;
+    @include m.flexibility(row, space-between,flex-start);
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.picture-wrapper{
+    width: 80px;
+    height: 100%;
+    position: relative;
+    
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.picture-wrapper-quantity{
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    background-color: v.$orange-1-c;
+    border-radius: 50%;
+    @include m.flexibility(row,center,center);
+    @include m.text-character(8px,10px,v.$light-1-c);
+    font-family: "Montserrat", sans-serif;
+}
+
+.top-wrapper{
+    @include m.flexibility(row, space-between, center);
+    margin-bottom: 4px;
+}
+
+.top-title{
+    @include m.text-character(14px,29px,v.$gray-4-c);
+    text-transform: uppercase;
+}
+
+.info-taste{
+    @include m.text-character(12px, 29px, v.$gray-2-c);
+    text-transform: capitalize;
+    margin-bottom: 26px;
+}
+
+.bottom-wrapper{
+    @include m.flexibility(row, space-between, center);
+    gap: 64px;
+}
+
+.quantity-wrapper{
+    @include m.flexibility(row,flex-start,center);
+    gap: 22px;
+}
+
+.quantity-button{
+    border: 1px solid v.$light-6-c;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    @include m.flexibility(row, center, center);
+}
+
+.quantity-number{
+    @include m.text-character(24px, 29px, v.$gray-4-c);
+}
+
+.close-button{
+    width: 18px;
+    height: 18px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.price{
+    @include m.text-character(14px, 29px, v.$gray-4-c);
+}
+
+@media screen and (min-width: v.$b-tablet-m) {
+    .list {
+        padding: 0 calcOutValue(54);
+    }
+
+    .item {
+        padding: calcOutValue(20) calcOutValue(16) calcOutValue(20) calcOutValue(30);
+        gap: calcOutValue(40);
+        margin-bottom: calcOutValue(16);
+    }
+
+    .picture-wrapper {
+        width: calcOutValue(100);
+    }
+
+    .picture-wrapper-quantity {
+        position: absolute;
+        top: calcOutValue(-13);
+        right: calcOutValue(-13);
+        width: calcOutValue(26);
+        height: calcOutValue(26);
+        @include m.text-character(calcOutValue(12), calcOutValue(14), v.$light-1-c);
+    }
+
+    .top-wrapper {
+        margin-bottom: calcOutValue(1);
+    }
+
+    .top-title {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .info-taste {
+        @include m.text-character(calcOutValue(16), calcOutValue(36), v.$gray-2-c);
+        margin-bottom: calcOutValue(26);
+    }
+
+    .bottom-wrapper {
+        gap: calcOutValue(120);
+    }
+
+    .quantity-wrapper {
+        gap: calcOutValue(18);
+    }
+
+    .quantity-button {
+        width: calcOutValue(36);
+        height: calcOutValue(36);
+
+        img{
+            width: calcOutValue(24);
+            height: calcOutValue(24);
+        }
+    }
+
+    .quantity-number {
+        @include m.text-character(calcOutValue(24), calcOutValue(36), v.$gray-4-c);
+    }
+
+    .close-button {
+        width: calcOutValue(24);
+        height: calcOutValue(24);
+        padding: calcOutValue(6);
+        background-color: transparent;
+    }
+
+    .price {
+        @include m.text-character(calcOutValue(22), calcOutValue(36), v.$gray-4-c);
+    }
+}

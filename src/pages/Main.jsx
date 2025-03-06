@@ -7,6 +7,7 @@ import  {Gallery}  from "../components/Main/Gallery";
 import { Field } from "../components/Main/Field";
 import { Philosophy } from "../components/Main/Philosophy";
 import { Information } from "components/Main/Information";
+import { FormBlock } from "components/Auth/FormBlock";
 
 const Main = () => {
     
@@ -21,7 +22,8 @@ const Main = () => {
             <Information/>
             <Gallery />
             <Field />
-            <Philosophy/>
+            <Philosophy />
+            <FormBlock/>
         </main>
     )
 }

@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/BlogPage/OtherArticle.module.scss";
+import s from "../../assets/styles/components/BlogPage/OtherArticle.module.scss";
 
 import img1 from '../../assets/images/blog_page/img-1.png';
 import img2 from '../../assets/images/blog_page/img-2.png';
@@ -40,7 +40,7 @@ export const OtherArticle = () => {
                     nextEl: `.${s['next-btn']}`,
                 }}
                 pagination={{
-                    el: `.${s['pagination-wrapper']} .${s.pagination}`,
+                    el: `.${s['pagination-wrapper']}`,
                     type: 'progressbar',
                 }}
                 breakpoints={{
@@ -55,84 +55,83 @@ export const OtherArticle = () => {
                 }}
             >
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
                         <img className={s['article-picture']} width="250" src={img1} alt="grapes" />
-                    </div>
-                    
+                    </div></Link>
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
                         <img className={s['article-picture']} width="250" src={img2} alt="grapes" />
-                    </div>
-                    
+                    </div></Link>
+            
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
                         <img className={s['article-picture']} width="250" src={img3} alt="grapes" />
-                    </div>
+                    </div></Link>
                     
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
                         <img className={s['article-picture']} width="250" src={img1} alt="grapes" />
-                    </div>
+                    </div></Link>
                    
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
                         <img className={s['article-picture']} width="250" src={img2} alt="grapes" />
-                    </div>
+                    </div></Link>
                     
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={s.item}>
-                    <div className={s['article-picture-wrapper']}>
-                    <img className={s['article-picture']} width="250" src={img3} alt="grapes" />
-                    </div>
+                    <Link to='/blog-page'><div className={s['article-picture-wrapper']}>
+                        <img className={s['article-picture']} width="250" src={img3} alt="grapes" />
+                    </div></Link>
                    
                     <div className={s['article-wrapper']}>
-                        <h3 className={s['article-title']}>The Heart of our Winemaking </h3>
+                        <Link to='/blog-page'><h3 className={s['article-title']}>The Heart of our Winemaking </h3></Link>
                         <p className={s['article-date']}>January 23, 2024</p>
-                        <Link className={s['article-button']}>
+                        <Link to='/blog-page' className={s['article-button']}>
                             <p>explore</p>
                             <img src={btn2} alt="arrow" />
                         </Link>
@@ -145,13 +144,11 @@ export const OtherArticle = () => {
             <button className={`swiper-button-next ${s['next-btn']}`} type="button">
                 <img src={btn2} alt="button" />
             </button>
-            <div className={s['pagination-wrapper']}>
-                <div className={s.pagination}>
+            <div className={`${s['pagination-wrapper']} ${['progressbar-wrapper-products']}`}>
                     <span className={s['swiper-pagination-progressbar-fill']}>
                     </span>
-                </div>
             </div>
-            <div className={s['pagination-bullet']}></div>
+            <div className={`${s['pagination-bullet']} ${['bullet-wrapper-gallery']}`}></div>
         </section>
     );
 }

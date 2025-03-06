@@ -1,0 +1,33 @@
+@use '../../mixins.scss' as m;
+@use '../../variables.scss' as v;
+
+@import '../../function.scss';
+
+.wrapper {
+    @include m.backdrop(#00000080);
+    justify-content: flex-end;
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    width: 270px;
+    height: 100vh;
+    background-color: v.$light-2-c;
+}
+
+.top-wrapper {
+    padding: 34px 18px 6px 18px;
+    @include m.flexibility(row, space-between, center);
+    border-bottom: 1px solid v.$light-5-c;
+
+    h4 {
+        @include m.text-character(16px, 29px, v.$gray-3-c);
+        text-transform: uppercase;
+    }
+
+    button {
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+    }
+}

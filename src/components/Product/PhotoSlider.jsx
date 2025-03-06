@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import s from "../../assets/components/Product/PhotoSlider.module.scss";
+import s from "../../assets/styles/components/Product/PhotoSlider.module.scss";
 
 import img1 from "../../assets/images/product/img-1.png";
 import btn1 from "../../assets/images/product/arrow-left.svg";
@@ -29,8 +29,8 @@ export const PhotoSlider = ({isLike,setLike}) => {
                     spaceBetween={0}
                     slidesPerView={1}
                     navigation={{
-                    prevEl: `.${s['prev-btn']}`,
-                    nextEl: `.${s['next-btn']}`,
+                    prevEl: `.${s['prev-button']}`,
+                    nextEl: `.${s['next-button']}`,
                     }}
                     >
                         <SwiperSlide className={s.item}>
@@ -46,10 +46,10 @@ export const PhotoSlider = ({isLike,setLike}) => {
                             <img src={img1} alt="wine" />
                             </SwiperSlide>
                     </Swiper>
-                <button className={`swiper-button-prev ${s['prev-btn']}`} type="button">
+                <button className={`swiper-button-prev ${s['prev-button']}`} type="button">
                    <img src={btn1} alt="arrow-button" />
             </button>
-                <button className={`swiper-button-next ${s['next-btn']}`} type="button">
+                <button className={`swiper-button-next ${s['next-button']}`} type="button">
                    <img src={btn2} alt="arrow-button" />
             </button>
             </div>
