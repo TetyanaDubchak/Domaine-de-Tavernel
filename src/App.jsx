@@ -3,9 +3,6 @@ import { Route, Routes } from "react-router-dom";
 
 import { SharedLayout } from "./components/Header/SharedLayout";
 import { PaymentLayout } from "./components/Header/PaymentLayout";
-import { ContactDetail } from "./components/Payment/ContactDetail";
-import { DeliveryDetail } from "./components/Payment/DeliveryDetail";
-import { PaymentDetail } from "./components/Payment/PaymentDetail";
 import  Main  from "./pages/Main";
 const About = lazy(() => import("./pages/About"));
 const Search = lazy(() => import("./pages/Search"));
@@ -34,9 +31,6 @@ export const App = () => {
         <Route index element={<Main />} />
       </Route>
     <Route path='/payment' element={<PaymentLayout />}>
-        {/* <Route index element={< ContactDetail />} />
-        <Route path='delivery' element={< DeliveryDetail />} />
-        <Route path='pay' element={< PaymentDetail/>} /> */}
     </Route>
     </Routes>
    );
