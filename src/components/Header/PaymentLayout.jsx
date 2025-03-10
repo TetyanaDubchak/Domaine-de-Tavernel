@@ -12,7 +12,7 @@ import { PaymentDetail } from 'components/Payment/PaymentDetail';
 
 export const PaymentLayout = () => {
     const { closePaymentPage } = usePaymentStore();
-    const {isContactActive,isDeliveryActive,isPaymentActive,wasContactSent,wasDeliverySent, wasPaymentSent} = usePayLinkStore();
+    const {isContactActive,isDeliveryActive,isPaymentActive,wasContactSent} = usePayLinkStore();
 
     return (
         <div>
