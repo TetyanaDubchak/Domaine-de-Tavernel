@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import s from '../../assets/styles/components/Payment/PaymentMethod.module.scss';
-import { SelfShipping } from './SelfShipping';
-import { PostShipping } from './PostShipping';
-import { CourierShipping } from './CourierShipping';
 import { ContinueBtn } from './ContinueBtn';
 import { PayInfo } from './PayInfo';
 
