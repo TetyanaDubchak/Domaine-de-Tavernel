@@ -13,7 +13,6 @@ export const RegistrationForm = () => {
          });
         
         const [isCheckedPolicy, setIsCheckedPolicy] = useState(false);
-        const [isReviewOpen, setIsReviewOpen] = useState(false);
         
         const handleCheckedPolicy = (e) => {
              const {  checked } = e.target;
